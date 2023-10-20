@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Ejercicio 4</title>
+    <style>
+        input, a, button {
+            display: block;
+            margin: 1em;
+        }
+
+        input:invalid {
+            background-color: pink;
+        }
+
+        input {
+            margin: 1em;
+            border-right: 0;
+            border-top: 0;
+            border-left: 0;
+            border-bottom: 1px darkgray solid;
+        }
+
+        button {
+            background-color: black;
+            color: burlywood;
+            border-radius: 10em;
+            width: 10em;
+            height: 2.5em;
+            border: 0px;
+            font-style: bold;
+        }
+
+        button:hover {
+            background-color: grey;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="inicio-sesion">
+        <form action="ejercicio4.html" method="post">
+            <h2>Iniciar sesión</h2>
+            <input type="email" name="email" id="email" placeholder="Email" aria-label="Introduce tu e-mail:"
+            pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" title="E-mail" required>
+            <input type="password" name="psw" id="psw" placeholder="Contraseña" aria-label="Introduce tu contraseña:"
+                    pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" title="Password" required>
+            <a href="#">Recuperar contraseña</a>
+            <button type="submit" name="btnEnviar">Iniciar sesión</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
