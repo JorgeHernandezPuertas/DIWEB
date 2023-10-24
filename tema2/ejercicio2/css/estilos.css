@@ -1,0 +1,16 @@
+body, p {
+    color: black;
+    background-color: white;
+}
+
+.estilo {
+    color:blue;
+}
+
+#p2 {
+    color:aquamarine;
+}
+
+#p1 {
+    color: red;
+}
