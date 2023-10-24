@@ -18,11 +18,7 @@
             <a href="#"><img src="images/bolsa.svg" alt="bolsa de la compra"></a>
         </nav>
         <div id="buscador-div">
-            <picture>
-                <source media="(min-width:650px)" srcset="images/prueba.jpg" width="200">
                 <img src="images/lupa.svg" alt="icono de lupa">
-            </picture>
-
             <input type="text" name="buscador" id="buscador" placeholder="¿Qué estás buscando?">
         </div>
     </header>
@@ -31,7 +27,12 @@
             <h2>MOBILIARIO INFANTIL</h2>
             <article id="mobiliario1">
                 <img src="images/favorito.svg" alt="icono favoritos">
-                <img src="images/foto1.jpg" alt="RETRO CÓMODA BLANCA INFANTIL" width="200" height="200">
+                <picture>
+                    <source media="(min-width:850px)" srcset="https://img1.kenayhome.com/75836/crate-sofa-tapizado-tela.jpg" width="200" >
+                    <source media="(min-width:550px)" srcset="https://img1.kenayhome.com/109114/ilan-cabecero-beige.jpg" width="200" >
+                    <img src="images/foto1.jpg" alt="RETRO CÓMODA BLANCA INFANTIL" width="200">
+                </picture>
+                
                 <p>ENVÍO RÁPIDO</p>
                 <h4>RETRO CÓMODA BLANCA INFANTIL</h4>
                 <h4>559,00 €</h4>
