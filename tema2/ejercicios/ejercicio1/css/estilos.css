@@ -1,3 +1,4 @@
+/* Estilos a etiquetas */
 /* Apartado A */
 body {
     font-family: 'open sans', sans-serif;
@@ -6,39 +7,10 @@ body {
     background-color: white;
 }
 
-/* Apartado B */
-header, footer {
-    background-color: #e6e7e8;
-    border:  #3f3f3f solid 2px;
-}
-
-/* Apartado C */
-footer {
-    color: #3f3f3f;
-    height: 2rem;
-}
-
-/* Apartado D */
-#logo {
-    width: 5rem;
-    height: 4.35rem;
-}
-
 /* Apartado E */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Bree Serif", serif;
     color: #00acdd;
-}
-
-/* Apartado F */
-header h1 {
-    color:#004166;
-    font-weight: bold;
-}
-
-/* Apartado G */
-#subject {
-    color: #96bc33;
 }
 
 /* Apartado H */
@@ -56,54 +28,87 @@ a:hover {
     color: #f58a1e;
 }
 
-/* Apartado I */
-nav ul li {
-    list-style-type: none;
-}
+/* Fin estilos etiquetas */
 
-/* Apartado J  (Se puede hacer tanto con id como con nav, ya que es el único) */
-#main-menu {
-    background-color: #004166;
-    font-weight: bold;
-    border: 2px solid #e6e7e8;
-}
-
-/* Apartado K */
-main {
-    border: 2px solid #004166;
-}
-
-/* Apartado L */
-main section h2 {
-    text-align: center;
-}
-
+/* Estilos de clase */
 /* Apartado M */
 .new-art {
     border: 5px solid #e6e7e8;
     border-radius: 10px;
     width: 50%;
 }
+/* Fin estilos de clase */
+
+/* Apartado B */
+header, footer {
+    background-color: #e6e7e8;
+    border:  #3f3f3f solid 2px;
+}
+
+/* Apartado C */
+footer {
+    color: #3f3f3f;
+    height: 2rem;
+}
+
+/* Apartado D */
+header img#logo {
+    width: 5rem;
+    height: 4.35rem;
+}
+
+/* Apartado F */
+header h1 {
+    color:#004166;
+    font-weight: bold;
+}
+
+/* Apartado G */
+header h1 span#subject {
+    color: #96bc33;
+}
+
+/* Apartado J  (Se puede hacer tanto con id como con nav, ya que es el único) */
+nav#main-menu {
+    background-color: #004166;
+    font-weight: bold;
+    border: 2px solid #e6e7e8;
+}
+
+/* Apartado I */
+nav ul li {
+    list-style-type: none;
+}
+
+/* Apartado K */
+main section#principal {
+    border: 2px solid #004166;
+}
+
+/* Apartado L */
+main section#principal h2 {
+    text-align: center;
+}
+
+/* Apartado P */
+main section#principal h2 + article.new-art {
+    background-color: #e6e7e8;
+    border-color: #f58a1e;
+}
 
 /* Apartado N */
-main section article img {
+main section#principal article img {
     width: 30%;
     height: auto;
 }
 
 /* Apartado O */
-main section article p {
+main section#principal article p {
     width: 70%;
     height: auto;
 }
 
-/* Apartado P */
-main section h2 + article {
-    background-color: #e6e7e8;
-    border-color: #f58a1e;
-}
-
 /* Refactorizo todos los border-radius de 5px */
-main, #main-menu, header, footer {
+section#principal, nav#main-menu, header, footer {
     border-radius: 5px;
 }
