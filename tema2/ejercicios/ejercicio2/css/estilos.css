@@ -1,9 +1,50 @@
-@media (min-width:450) {
-    
+* {
+    box-sizing: border-box;
 }
-@media (min-width:750) {
-    
+
+a {
+    text-decoration: none;
+    color: white;
 }
-@media (min-width:1000) {
-    
+
+main nav ul#menu {
+    display: flex;
+    background-color: deepskyblue;
+    list-style-type: none;
+    padding: 0;
+}
+
+main nav ul#menu li{
+    padding: 0.5em;
+}
+
+
+@media (min-width:0px) and (max-width:650px) {
+    main nav ul#menu{
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+    }
+
+    main nav ul#menu li{
+        border-bottom: 1px solid lightblue;
+    }
+}
+@media (min-width:650px) and (max-width:800px) {
+    main nav ul#menu{
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding-left: 2em;
+    }
+}
+@media (min-width:800px) {
+    main nav ul#menu{
+        flex-direction: row;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    main nav ul#menu li{
+        margin-left: 0.5em;
+    }
 }
