@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+</head>
+
+<body>
+    <form action="ejercicio5.html" method="post">
+        <div id="caja-genero">
+            <input type="radio" autofocus name="sexo" id="sr" value="sr"><label for="sr"><strong>Sr.</strong></label>
+        <input type="radio" name="sexo" id="sra" value="sra"><label for="sra"><strong>Sra.</strong></label>
+        </div>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre/Razón social" aria-label="Nombre:"
+            maxlength="32">
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos*" aria-label="Apellidos:"
+            maxlength="64" required>
+        <input type="email" name="email" id="email" placeholder="Email*" required aria-label="E-mail:" maxlength="32"
+            pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$">
+        <input type="password" name="psw" id="psw" placeholder="Contraseña*" required aria-label="Contraseña:"
+            pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" maxlength="32">
+        <label for="dia"><strong>FECHA DE NACIMIENTO</strong></label>
+        <div id="caja-fecha">
+            <select name="dia" id="dia">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="mes" id="mes">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="anio" id="anio">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        
+        <input type="text" placeholder="DNI/NID/NIE*" required id="dni" name="dni" aria-label="dni:"
+            pattern="^([0-9]{8})([-]?)([A-Za-z]{1})$" maxlength="9">
+        <input type="text" placeholder="Dirección*" name="direccion" id="direccion" required aria-label="Dirección:"
+            maxlength="128">
+        <input type="text" placeholder="Código postal*" required name="codpos" id="codpos" aria-label="Código postal:"
+            maxlength="5" pattern="(0[1-9]|5[0-2]|[0-4][0-9])[0-9]{3}">
+        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad*" required aria-label="Ciudad:" maxlength="32">
+        <input type="text" list="paises" name="pais" id="pais" placeholder="España" aria-label="pais:" required
+            maxlength="32">
+        <datalist id="paises">
+            <option value="España"></option>
+            <option value="Portugal"></option>
+            <option value="Francia"></option>
+        </datalist>
+        <input type="text" list="provincias" name="provincia" id="provincia" placeholder="Provincia*" aria-label="provincia:" required maxlength="32">
+        <datalist id="provincias">
+            <option value="Andalucía"></option>
+            <option value="Cataluña"></option>
+            <option value="Galicia"></option>
+        </datalist>
+        <p>Información adicional</p>
+        <input type="tel" name="telefono" id="telefono" required placeholder="Teléfono móvil*" aria-label="Telefono:" maxlength="9">
+        <div id="caja-politicas">
+            <input type="checkbox" name="politicas" id="politicas" required>
+            <label for="politicas">Estos datos personales se utilizarán para responder a sus búsquedas, procesas sus pedidos o autorizar acceso</label>
+        </div>
+    
+        <button name="btnEnviar" id="boton">Registrarse</button>
+    </form>
+</body>
+
+</html>

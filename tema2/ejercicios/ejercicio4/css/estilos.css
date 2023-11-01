@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+/* Estilos de etiquetas generales */
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    margin:0 auto;
+}
+
+form > * {
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+form > input {
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 0.5em;
+    padding-left: 1em;
+}
+
+form > input::placeholder {
+    color: black;
+}
+
+/* Fin de estilos de etiquetas generales */
+
+/* Estilos etiquetas concretas */
+form div#caja-fecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+form div#caja-fecha select {
+    width: 28%;
+    padding: 0.5em;
+    padding-left: 1em;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+form div#caja-politicas {
+    font-size: 0.75em;
+}
+
+form > button {
+    border: none;
+    border-radius: 10em;
+    color: burlywood;
+    background-color: black;
+    width: 12em;
+    height: 3em;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+form > button:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+/* Fin de estilos etiquetas concretas */

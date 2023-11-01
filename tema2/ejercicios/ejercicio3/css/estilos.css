@@ -1,0 +1,61 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section#inicio-sesion form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 50%;
+}
+
+section#inicio-sesion form h2 {
+    font-size: 2.5em;
+}
+
+section#inicio-sesion form input {
+    border: none;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 1.5em;
+    width: 80%;
+    padding: 1em;
+    font-size: 1em;
+}
+
+section#inicio-sesion form input::placeholder {
+    color: black;
+}
+
+section#inicio-sesion form a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-size: 0.75em;
+}
+
+section#inicio-sesion form a:hover {
+    color: rgb(85, 85, 85);
+}
+
+section#inicio-sesion form button {
+    border: none;
+    border-radius: 10em;
+    color: burlywood;
+    background-color: black;
+    width: 12em;
+    height: 3em;
+    font-weight: bold;
+}
+
+section#inicio-sesion form button:hover {
+    background-color: rgb(53, 53, 53);
+}
