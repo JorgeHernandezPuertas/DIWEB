@@ -65,17 +65,17 @@ div#contenido footer {
     }
 
     div#contenido main article {
-        flex-basis: 50%;
+        flex: 3;
         margin: 0 0.5rem;
         margin-bottom: 0.5rem;
     }
 
     div#contenido main nav {
-        flex-basis: 25%;
+        flex: 1;
 
     }
 
     div#contenido main aside {
-        flex-basis: 25%;
+        flex:  1;
     }
 }

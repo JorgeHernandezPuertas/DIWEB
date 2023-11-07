@@ -55,17 +55,21 @@ div#contenido footer {
     }
 
     div#contenido main aside {
-        flex-basis: 50%;
+        flex: 50%;
     }
 }
 
 @media (min-width:1024px) { 
+    div#contenido main{
+        flex-wrap: nowrap;
+    }
+
     div#contenido main article {
-        flex-basis:50%;
+        flex: 3;
     }
 
     div#contenido main aside {
-        flex-basis: 25%;
+        flex: 1;
     }
 
     div#contenido main aside#abajo1 {
