@@ -60,11 +60,12 @@ a:hover{
   color: #f58a1e;
 }
 
-nav ul li{
+nav ul li {
   list-style-type: none;
   text-align: center;
 }
-nav ul{
+
+nav ul {
 	padding-left: 0;
   display: none;
 }
@@ -156,6 +157,21 @@ div#content main section#principal article.news-art p{
 
 /* Versión de escritorio */
 @media (min-width:1024px) {
+  nav#main-menu {
+    flex-flow: row nowrap;
+  }
+
+  nav#main-menu label {
+    display:none;
+  }
+
+  nav#main-menu ul {
+    flex:100%;
+    display: flex;
+    flex-flow:row;
+    justify-content: space-evenly;
+  }
+
   main section#principal {
     flex-flow: row wrap;
   }
