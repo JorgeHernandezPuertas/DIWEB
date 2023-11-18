@@ -1,74 +1,85 @@
-*{
-	box-sizing:border-box;
+* {
+	box-sizing: border-box;
 }
+
 /*Comenzamos con la versión móvil*/
 
 /*Hacemos el cuerpo de la web flexible*/
-body{
+body {
 	display: flex;
 	flex-flow: row wrap;
 	font-size: 16px;
-	color:grey;
-	padding: 1rem;
+	color: grey;
+	padding: 0.5rem;
 }
+
 /*Estilo para todos los enlaces de la web*/
-a{
-	color:grey;
+a {
+	color: grey;
 	text-decoration: none;
 }
-a:hover{
-	cursor:pointer;
+
+a:hover {
+	cursor: pointer;
 	text-decoration: underline;
 }
-ul{
+
+ul {
 	list-style: none;
 	padding-left: 0;
 }
+
 /*Hacemos la cabecera flexible*/
-header{
+header {
 	display: flex;
 	flex-flow: row;
 	align-items: center;
+	border-bottom: 1px solid lightgray;
+	margin-bottom: 1rem;
 	/*La cabecera ocupa todo el ancho de la página*/
 	flex: 100%;
 }
+
 /*La hamburguesa la colocamos al principio*/
-header > nav#menu-principal{
+header>nav#menu-principal {
 	order: -2;
 	padding-right: 0.5rem;
 }
-header > nav#menu-principal > label > span{
+
+header>nav#menu-principal>label>span {
 	font-weight: bold;
 	font-size: 2rem;
 }
+
 /*El input de la hamburguesa tiene que estar oculto*/
-header > nav#menu-principal > input {
+header>nav#menu-principal>input {
 	display: none;
 }
 
 /*El menu principal es flexible*/
-header > nav#menu-principal > ul#menu{
+header>nav#menu-principal>ul#menu {
 	display: none;
 	padding: 0.3rem 0;
 	border-bottom: 1px solid grey;
 }
 
-header > nav#menu-principal > input:checked + ul#menu{
+header>nav#menu-principal>input:checked+ul#menu {
 	display: block;
 	background-color: white;
 	position: absolute;
 	top: 65px;
-	flex:100%;
+	flex: 100%;
 }
 
 /*En segunda posición está el buscador*/
-header > nav#search{
+header>nav#search {
 	font-size: 1.4rem;
-	order:-1;
+	order: -1;
 	padding-left: 1rem;
 }
+
 /*En tercera posición se encuentra el logo*/
-header > a#logo{
+header>a#logo {
 	font-size: 1.4rem;
 	order: 0;
 	padding: 0 1rem;
@@ -77,21 +88,22 @@ header > a#logo{
 }
 
 /*El logo de la cabecera tiene un tamaño fijo*/
-header > a#logo > picture > img {
+header>a#logo>picture>img {
 	width: 200px;
 	height: auto;
 }
 
 
 /*En cuarta posición está el icono del usuario de login*/
-header > nav#login{
+header>nav#login {
 	font-size: 1.4rem;
 	order: 1;
 	padding-right: 1em;
 	justify-self: flex-end;
 }
+
 /*Por último, en quinta posición se encuentra la bolsa de la compra*/
-header > nav#bag{
+header>nav#bag {
 	padding-right: 0.5rem;
 	font-size: 1.4rem;
 	order: 2;
@@ -107,52 +119,54 @@ main {
 
 /*Los artículos tienen que ser flexibles*/
 /*En la versión de móvil se muestran en filas de 2*/
-main > article.item {
+main>article.item {
 	display: flex;
-	flex-flow:column;
+	flex-flow: column;
 	align-items: center;
-	flex:50% 0;
+	flex: 50% 0;
 	padding: 0 1rem;
 }
 
-main > article.item > * {
-	margin-bottom:0.5rem;
+main>article.item>* {
+	margin-bottom: 0.5rem;
 }
 
 /*El párrafo con la descripción del artículo va en segundo lugar*/
-main > article.item > p {
+main>article.item>p {
 	text-align: center;
-	order:-1;
+	order: -1;
 }
 
 
 /*La imagen del artículo aparece en primer lugar*/
-main > article.item > picture {
+main>article.item>picture {
 	order: -2;
 }
 
 /*Las imágenes de los articulos tienen una anchura relativa*/
-main > article.item > picture > img {
+main>article.item>picture>img {
 	width: 100%;
 	height: auto;
 }
 
 /*El precio va en tercera posición*/
-main > article.item > span {
+main>article.item>span {
 	order: 0;
 }
 
 /*El botón lo colocamos en última posición*/
-main > article.item > input{
+main>article.item>input {
 	order: 1;
-	border:0;
+	border: 0;
 	background-color: #92d1c8;
 	border-radius: 0.2rem;
-	padding:0.5rem;
+	padding: 0.5rem;
 	width: 150px;
+	color: white;
 }
-main > article.item > input:hover{
-	cursor:pointer;
+
+main>article.item>input:hover {
+	cursor: pointer;
 	background-color: #88c3ba;
 }
 
@@ -161,31 +175,143 @@ footer {
 	display: flex;
 	flex-flow: row wrap;
 	flex: 100%;
+	background-color: lightgray;
 }
+
 /*El menú adicional es flexible y va en segunda posición*/
+footer>nav {
+	text-align: center;
+	flex: 100%;
+	order: -1;
+	padding: 1rem;
+}
+
+footer>nav>ul#menu-adicional {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
 
 /*El menú social hay que hacerlo flexible*/
-footer > nav#menu-social-adicional{
+footer>nav#menu-social-adicional {
 	display: flex;
+	flex-flow: column;
+	align-items: center;
+	flex: 100%;
 	/*lo colocamos en primer lugar dentro del pie*/
-	order: -1;
+	order: -2;
 }
+
 /*El menu social también es flexible*/
-
-
-footer > nav#menu-social-adicional > ul > li i{
-	font-size:1.5rem;
-	color: #cda194;
-	padding:0 0.5rem;
+footer>nav#menu-social-adicional>ul {
+	display: flex;
+	flex-flow: row nowrap;
 }
+
+footer>nav#menu-social-adicional>ul>li {
+	text-align: center;
+}
+
+footer>nav#menu-social-adicional>ul>li i {
+	font-size: 1.5rem;
+	color: #cda194;
+	padding: 0 0.5rem;
+}
+
 /*El texto del pie va al final*/
-footer > small {
-	width:30%;
+footer>small {
+	flex: 100%;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 /*VERSIÓN DE ESCRITORIO*/
-/*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
-/*Hay 4 artículos por fila*/
-/*La barra social y el menú adicional están uno al lado del otro*/
+@media (min-width: 1024px) {
 
+	/* Cabecera */
+	/*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
+	header {
+		flex-flow: wrap;
+		border: none;
+	}
 
+	header>a#logo {
+		flex: 100%;
+		order: 4;
+		text-align: left;
+	}
+
+	header>nav#search {
+		flex: 1;
+		text-align: right;
+		padding-right: 3rem;
+	}
+
+	header>nav#login {
+		padding-right: 3rem;
+	}
+
+	header>nav#bag {
+		padding-right: 1rem;
+	}
+
+	header>nav#menu-principal {
+		flex: 100%;
+		order: 5;
+	}
+
+	header>nav#menu-principal>label {
+		display: none;
+	}
+
+	header>nav#menu-principal>ul#menu {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+		text-align: center;
+	}
+
+	header>nav#menu-principal>ul#menu li {
+		padding: 0.25rem;
+	}
+
+	/* Fin cabecera */
+	/* Main */
+	/*Hay 4 artículos por fila*/
+	main>article.item {
+		flex: 25% 0;
+	}
+
+	/* Hago que todos los articles ocupen toda su altura para cuadrarlo */
+	main>article.item>p {
+		flex: 1;
+	}
+
+	/* Fin main */
+	/* Footer */
+	/*La barra social y el menú adicional están uno al lado del otro*/
+	footer>nav,
+	footer>nav#menu-social-adicional {
+		flex: 50%;
+	}
+
+	footer > nav:nth-child(3) > ul {
+		border-top: 1px solid grey;
+		margin-top: 0;
+		padding-top: 1rem;;
+	}
+
+	footer>nav>ul#menu-adicional {
+		flex-flow: wrap;
+	}
+
+	footer>nav>ul#menu-adicional>li {
+		flex: 50%;
+		text-align: left;
+	}
+
+	nav#menu-social-adicional {
+		justify-content: center;
+	}
+	/* Fin footer */
+}
