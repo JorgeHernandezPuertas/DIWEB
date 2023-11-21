@@ -1,43 +1,134 @@
 /* Etiquetas generales */
+* {box-sizing: border-box;}
 body {
-    display: flex;
-    flex-flow: wrap;
     font-size: 16px;
     color: black;
+}
+div#contenedor {
+    display: flex;
+    flex-flow: wrap;
 }
 ul {list-style: none;}
 a {
     text-decoration: none;
     color: white;
-    color: black;
 }
 a:hover {cursor: pointer;}
 a:link {color:white;}
-a:visited{color: white;color: black;}
+a:visited{color: white;}
 img {
     width: 100%;
     height: auto;
 }
 /* Fin etiquetas generales */
 /* Etiquetas específicas */
+/* Cabecera */
 header {
     flex: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
 }
 header > picture {
     flex: 1;
 }
 header > picture > img {width: 150px;}
-header > nav#bloque-iconos {
-
+header > nav#bloque-iconos ul {
+    display: flex;
+    font-size: 2rem;
+    margin: 0;
 }
+header > nav#bloque-iconos ul li {padding: 0 1rem;}
 header > nav#menu-principal{
-    
+    margin-top: .5rem;
+    flex: 100%;
 }
+header > nav#menu-principal > div#hamburguesa {
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+header > nav#menu-principal > div#hamburguesa > span:first-child {
+    font-size: 2rem;
+}
+/* Desplegable */
 header > nav#menu-principal > ul#menu {
     display: none;
 }
+header > nav#menu-principal > div#hamburguesa:hover + ul#menu, header > nav#menu-principal > ul#menu:hover {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 106px;
+    background-color: black;
+    color: white;
+    width: 97.3%;
+    padding: 1rem;
+}
+header > nav#menu-principal > div#hamburguesa:hover + ul#menu > li > ul, header > nav#menu-principal > ul#menu:hover > li > ul {
+    display: none;
+}
+/* Fin desplegable */
 
+/* Fin cabecera */
+/* Cuerpo */
 main {
     flex: 100%;
+    padding-top: 2rem;
 }
+main > section {
+    width: 17.5rem;
+    margin: 0 auto;
+}
+main > section > h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+main > section > form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+main > section label {
+    display: none;
+}
+main > section > form > input, main > section > form > textarea, main > section > form > select {
+    width: 18rem;
+    font-size: 1.1rem;
+    padding: 0.25rem .5rem;
+    margin-bottom: .5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+main > section > form > input:focus, main > section > form > textarea:focus, main > section > form > select:focus {
+    background-color: black;
+    border: 6px solid grey;
+}
+main > section > form > select {
+    background-color: lightgrey;
+    color: gray;
+}
+main > section > form > span#caracteres {
+    color: gray;
+    margin-bottom: .5rem;
+    align-self: flex-start;
+}
+main > section > form > input[type="button"] {
+    background-color: black;
+    color: white;
+    border: none;
+}
+main > section > form > input[type="button"]:hover {
+    background-color: rgb(70, 69, 69);
+}
+/* Fin cuerpo */
+/* Footer */
+footer {
+    display: none;
+}
+/* Fin footer */
 /* Fin etiquetas específicas */

@@ -1,4 +1,5 @@
 /* Estilos generales */
+* {box-sizing: border-box;}
 body {
     display: flex;
     flex-flow: wrap;
@@ -35,7 +36,6 @@ img {
 header {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     align-items: center;
     flex: 100%;
     padding: 0 1rem;
@@ -47,6 +47,7 @@ header > picture {
 header > picture > img#logo {width: 100px;}
 /* Menú principal */
 header > nav#menu-principal {
+    padding-right: 4rem;
     order: -2;
 }
 /* Desplegar el menú */
@@ -58,8 +59,9 @@ header > nav#menu-principal > input:checked + ul#menu {
     position: absolute;
     top: 2rem;
     left: 0.5rem;
-    background-color: lightgrey;
-    padding: 0;
+    background-color: white;
+    padding: 1rem;
+    width: 50%;
 }
 /* Fin desplegar el menú */
 /* Fin menú principal */
