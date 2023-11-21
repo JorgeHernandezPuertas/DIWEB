@@ -3,6 +3,7 @@
 body {
     font-size: 16px;
     color: black;
+    font-family: "open sans condensed";
 }
 div#contenedor {
     display: flex;
@@ -61,10 +62,10 @@ header > nav#menu-principal > div#hamburguesa:hover + ul#menu, header > nav#menu
     display: flex;
     flex-flow: column;
     position: absolute;
-    top: 106px;
+    top: 116px;
     background-color: black;
     color: white;
-    width: 97.3%;
+    width: 70%;
     padding: 1rem;
 }
 header > nav#menu-principal > div#hamburguesa:hover + ul#menu > li > ul, header > nav#menu-principal > ul#menu:hover > li > ul {
