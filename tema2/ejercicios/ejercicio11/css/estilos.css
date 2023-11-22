@@ -4,17 +4,54 @@ body {
     font-size: 16px;
     color: black;
 }
+a {
+    color:black;
+    text-decoration: none;
+}
+a:visited {color:black;}
+a:hover{cursor: pointer;}
 /* Fin etiquetas generales */
 /* Etiquetas específicas */
+section#inicio-sesion {
+    display: flex;
+}
 section#inicio-sesion > form > h2 {
     font-size: 2rem;
+    margin: 0;
+    padding-bottom: 1rem;
 }
 section#inicio-sesion > form {
     display: flex;
-    flex-flow: column;
+    flex-flow: wrap;
+    flex: 1;
+    max-width: 20rem;
+    min-width: 20rem;
+    padding: 1rem;
 }
 section#inicio-sesion > form > input {
-    width: 20rem;
-    padding: .5rem;
+    flex: 100%;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1rem;
+}
+section#inicio-sesion > form > input::placeholder {
+    color: black;
+}
+section#inicio-sesion > form > a {
+    flex: 100%;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+section#inicio-sesion > form > button {
+    flex: 50% 0;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(31, 31, 31);
+    color: burlywood;
+    padding: 1rem;
+}
+section#inicio-sesion > form > button:hover {
+    background-color: rgb(80, 79, 79);
 }
 /* Fin etiquetas específicas */
