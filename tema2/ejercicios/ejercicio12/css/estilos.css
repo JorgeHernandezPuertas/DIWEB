@@ -1,0 +1,43 @@
+/* Etiquetas generales */
+* {box-sizing: border-box;}
+
+body {
+    font-size: 16px;
+    color: black;
+}
+ul {
+    list-style: none;
+    padding: .5rem 1rem;
+    background-color: lightgray;
+    border-radius: .5rem;
+}
+a {
+    color: rgb(0, 0, 180);
+    text-decoration: none;
+    padding: .25rem;
+    border-bottom: 1px solid gray;
+    border-radius: .25rem;
+}
+a:visited{color: rgb(0, 0, 180);}
+a:hover{cursor: pointer;}
+/* Fin etiquetas generales */
+/* Etiquetas específicas */
+div#contenedor > nav {
+    display: flex;
+}
+div#contenedor > nav > ul {
+    display: flex;
+    flex: 100%;
+}
+div#contenedor > nav > ul > li {
+    padding: 0 .5rem;
+    border-right: 1px solid black;
+}
+div#contenedor > nav > ul > li:nth-child(3){
+    border: none;
+    flex: 1;
+}
+div#contenedor > nav > ul > li#login {
+    border: none;
+}
+/* Fin etiquetas específicas */
