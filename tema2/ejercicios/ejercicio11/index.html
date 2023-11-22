@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario login KENAY</title>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+</head>
+
+<body>
+    <section id="inicio-sesion">
+        <form action="index.html" method="post">
+            <h2>Iniciar sesión</h2>
+            <input type="email" name="email" id="email" placeholder="Email" aria-label="Introduce tu e-mail:"
+                pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" title="E-mail" required autofocus >
+            <input type="password" name="psw" id="psw" placeholder="Contraseña" aria-label="Introduce tu contraseña:"
+                pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" title="Password" required>
+            <a href="#">Recuperar contraseña</a>
+            <button type="submit" name="btnEnviar">Iniciar sesión</button>
+        </form>
+    </section>
+</body>
+
+</html>

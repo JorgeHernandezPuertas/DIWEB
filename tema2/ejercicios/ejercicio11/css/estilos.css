@@ -1,0 +1,20 @@
+/* Etiquetas generales */
+* {box-sizing: border-box;}
+body {
+    font-size: 16px;
+    color: black;
+}
+/* Fin etiquetas generales */
+/* Etiquetas específicas */
+section#inicio-sesion > form > h2 {
+    font-size: 2rem;
+}
+section#inicio-sesion > form {
+    display: flex;
+    flex-flow: column;
+}
+section#inicio-sesion > form > input {
+    width: 20rem;
+    padding: .5rem;
+}
+/* Fin etiquetas específicas */
