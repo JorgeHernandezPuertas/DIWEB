@@ -1,0 +1,159 @@
+/* Etiquetas generales */
+* {box-sizing: border-box;}
+
+body {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:visited {color: black;}
+a:hover {cursor: pointer;}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+img {height: auto;}
+/* Fin etiquetas generales */
+/* Etiquetas específicas */
+div#contenedor {
+    display: flex;
+    flex-flow: wrap;
+    margin: 0;
+}
+
+div#contenedor > header {
+    flex: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+div#contenedor > header > h1 {display: none;}
+div#contenedor > header > img {
+    flex: 2rem 0;
+}
+div#contenedor > header > a {
+    flex: 1;
+    text-align: center;
+}
+div#contenedor > header > nav#opciones-cabecera > a {
+    padding: 0 .25rem;
+}
+div#contenedor > header > div#buscador-div {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .5rem;
+}
+div#contenedor > header > div#buscador-div > img {
+    position: absolute;
+    margin-right: 12rem;
+}
+div#contenedor > header > div#buscador-div > input {
+    flex: 20rem 1;
+    padding: .5rem;
+    text-align: center;
+    border: none;
+    background-color: lightgray;
+}
+
+div#contenedor > main {
+    flex: 100%;
+}
+div#contenedor > main > section {
+    flex: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+div#contenedor > main > section > h2 {
+    display: none;
+}
+div#contenedor > main > section > article {
+    flex: 50% 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 0 .25rem;
+}
+div#contenedor > main > section > article > img:first-child {
+    width: 2rem;
+    align-self: flex-start;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 8px;
+    background-color: white;
+    padding: .25rem;
+    border-radius: 4rem;
+}
+div#contenedor > main > section > article > img {
+    width: 100%;
+}
+div#contenedor > main > section > article > h4 {
+    margin: 0;
+    padding-top: 1rem;
+}
+div#contenedor > main > section > article > p {
+    margin: 0;
+    padding: .25rem 0;
+}
+div#contenedor > main > section > article > p > span.normal {
+    padding-right: 1rem;
+    width: 40%;
+    text-decoration: line-through;
+    font-size: .85rem;
+}
+div#contenedor > main > section > article > p > span.rebaja {
+    width: 40%;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+div#contenedor > footer {
+    flex: 100%;
+    display: flex;
+    flex-flow: wrap;
+    background-color: rgb(223, 218, 206);
+    margin: 0;
+    padding: 0 1rem;
+}
+div#contenedor > footer > nav#redes-sociales {
+    flex: 100%;
+}
+div#contenedor > footer > nav#redes-sociales > ul {
+    display: flex;
+}
+div#contenedor > footer > nav#redes-sociales > ul > li {
+    flex: 3rem 0;
+}
+div#contenedor > footer > nav#redes-sociales > ul > li > img {
+    width: 100%;
+}
+div#contenedor > footer > h4 {
+    flex: 100%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+div#contenedor > footer > nav#links-de-interes {
+    flex: 100%;
+}
+div#contenedor > footer > nav#links-de-interes > ul {
+    display: flex;
+    flex-flow: wrap;
+}
+div#contenedor > footer > nav#links-de-interes > ul > li {
+    flex: 100%;
+    border-bottom: 1px solid black;
+    padding: .5rem 0;
+}
+
+/* Fin etiquetas específicas */
