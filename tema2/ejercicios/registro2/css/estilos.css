@@ -1,0 +1,94 @@
+/* Estilos de etiquetas generales */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
+/* Fin de estilos de etiquetas generales */
+/* Estilos etiquetas específicas */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin:0 auto;
+    padding-top: 6vh;
+}
+
+form > div {
+    flex: 100%;
+    margin-bottom: 1em;
+}
+
+form > div#caja-genero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+form > input {
+    flex: 40% 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 0.5em;
+    padding-left: 1em;
+    margin-bottom: 2rem;
+}
+
+form > input::placeholder {
+    color: black;
+}
+
+
+form > label {
+    flex: 100%;
+    text-align: center;
+}
+
+form div#caja-fecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+form div#caja-fecha select {
+    width: 28%;
+    padding: 0.5em;
+    padding-left: 1em;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+form > p {
+    flex: 100%;
+    text-align: center;
+}
+
+form div#caja-politicas {
+    font-size: 0.75em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form > button {
+    border: none;
+    border-radius: 10em;
+    color: burlywood;
+    background-color: black;
+    width: 12em;
+    height: 3em;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+form > button:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+/* Fin de estilos etiquetas específicas */
