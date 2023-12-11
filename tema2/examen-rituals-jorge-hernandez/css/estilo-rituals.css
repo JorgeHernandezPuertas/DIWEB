@@ -1,0 +1,375 @@
+/* Etiquetas generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efedeb;
+    margin: 0;
+    font-family:  'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* Fin etiquetas generales */
+
+/* Etiquetas específicas */
+div#content {
+    display: flex;
+    flex-flow: wrap;
+}
+
+div#content>header {
+    flex: 100%;
+    background-color: #1a191a;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem .5rem;
+    padding-top: 1.5rem;
+}
+
+div#content>header>nav#bloque-iconos {
+    order: -1;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 8rem 0;
+}
+
+div#content>header>a#logo {
+    order: -2;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+div#content>header>nav#menu-principal {
+    order: -3;
+    color: white;
+    text-align: center;
+}
+
+/* Menú desplegable */
+div#content>header>nav#menu-principal>label {
+    cursor: pointer;
+}
+
+div#content>header>nav#menu-principal>input {
+    display: none;
+}
+
+div#content>header>nav#menu-principal>ul {
+    display: none;
+}
+
+div#content>header>nav#menu-principal>input:checked+ul {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    left: 0;
+    padding: 0;
+}
+
+div#content>header>nav#menu-principal>input:checked+ul>li {
+    padding: 1rem;
+}
+
+div#content>header>nav#menu-principal>input:checked+ul>li>a {
+    display: flex;
+    flex: 100%;
+    justify-content: space-between;
+}
+
+/* Fin menú desplegable */
+div#content>main {
+    flex: 100%;
+    display: flex;
+}
+
+div#content>main>section {
+    background-color: #f5f4f3;
+    display: flex;
+    flex-flow: wrap;
+}
+
+div#content>main>section>h2,
+div#content>main>section>div {
+    background-color: black;
+    color: white;
+    flex: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+div#content>main>section>h2 {
+    padding-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div#content>main>section>div {
+    padding: 0 5rem;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+}
+
+div#content>main>section>div>p {
+    flex: 18rem 0;
+}
+
+div#content>main>section>article {
+    background-color: white;
+    color: #515152;
+    border: 2px solid #eeedec;
+    flex: 50% 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div#content>main>section>article>h3 {
+    order: 2;
+    flex: 100%;
+    margin: 0;
+    padding: .75rem 0;
+    padding-left: .75rem;
+}
+
+div#content>main>section>article>p {
+    order: 3;
+    flex: 100%;
+    margin: 0;
+    padding: .75rem;
+    padding-left: .75rem;
+}
+
+div#content>main>section>article>span {
+    order: 4;
+    flex: 1;
+    padding-left: .75rem;
+}
+
+div#content>main>section>article>img {
+    width: 3rem;
+    cursor: pointer;
+    order: 5;
+}
+
+div#content>main>section>article>picture>img {
+    background-color: #faf9f8;
+}
+
+div#content>main>section>article>input {
+    order: 6;
+    display: none;
+}
+
+
+
+div#content>footer {
+    flex: 100%;
+    display: flex;
+    flex-flow: wrap;
+    background-color: black;
+    justify-content: center;
+}
+
+div#content>footer>nav#menu-adicional {
+    color: white;
+    flex: 100%;
+    padding: 0 1rem;
+}
+
+div#content>footer>nav#menu-adicional>ul {
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
+}
+
+div#content>footer>nav#menu-adicional>ul>li {
+    display: flex;
+    flex: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 1.5rem 0;
+    font-weight: lighter;
+}
+
+div#content>footer>nav#menu-adicional>ul ul {
+    display: none;
+}
+
+div#content>footer>nav#menu-social {
+    flex: 100%;
+    display: flex;
+}
+
+div#content>footer>nav#menu-social>ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+div#content>footer>nav#menu-social>ul>li {
+    flex: 4rem 0;
+    padding: .5rem;
+}
+
+div#content>footer>picture {
+    margin-bottom: 1rem;
+}
+
+div#content>footer>small {
+    color: white;
+    flex: 100%;
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Fin etiquetas específicas */
+
+/* Versión de tablet */
+@media (min-width:680px) {
+    div#content>main>section>article {
+        flex: 33.333333% 0;
+    }
+}
+
+/* Fin versión de tablet */
+/* Versión de Excritorio */
+@media (min-width:1024px) {
+
+    /* Cabecera */
+    div#content>header{
+        padding: 2rem .5rem;
+    }
+
+    div#content>header>a#logo {
+        order: -3;
+        flex: 5rem 0;
+    }
+
+    div#content>header>nav#menu-principal{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    div#content>header>nav#menu-principal>label {
+        display: none;
+    }
+
+    /* Si el menú esta desplegado */
+    div#content>header>nav#menu-principal>input:checked+ul {
+        position: static;
+        display: flex;
+        background-color: inherit;
+        flex-flow: row;
+        flex: 1;
+        padding: 0;
+    }
+    div#content>header>nav#menu-principal>input:checked+ul>li{
+        padding: 0;
+    }
+
+    div#content>header>nav#menu-principal>ul{
+        display: flex;
+        flex: 1;
+        padding: 0;
+        margin: 0;
+        font-weight: lighter;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    div#content>header>nav#menu-principal>ul>li>a>span:nth-child(2){
+        display: none;
+    }
+
+    
+
+    /* Fin cabecera */
+    /* Main */
+    div#content>main>section>article {
+        flex: 25% 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    div#content>main>section>article>img {
+        display: none;
+    }
+
+    div#content>main>section>article>span {
+        flex: 100%;
+        margin-bottom: 1rem;
+    }
+
+    div#content>main>section>article>input {
+        display: flex;
+        padding: .5rem 2rem;
+        background-color: white;
+        border: 1px solid gray;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+
+    /* Fin Main */
+    /* Footer */
+    div#content>footer{
+        align-items: center;
+    }
+    div#content>footer>nav#menu-adicional {
+        flex: 80%;
+    }
+    div#content>footer>nav#menu-adicional>ul{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    div#content>footer>nav#menu-adicional>ul>li{
+        border: none;
+        flex: 25%;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    div#content>footer>nav#menu-adicional>ul>li>span:nth-child(2){
+        display: none;
+    }
+
+    div#content>footer>nav#menu-social{
+        flex: 20%;
+        justify-content: flex-start;
+    }
+    div#content>footer>nav#menu-social>ul {
+        align-items: center;
+        padding-right: 2rem;
+    }
+    div#content>footer>nav#menu-social>ul>li{
+        flex: 3rem 0;
+    }
+    /* Fin Footer */
+}
+
+/* Fin versión de Excritorio */
