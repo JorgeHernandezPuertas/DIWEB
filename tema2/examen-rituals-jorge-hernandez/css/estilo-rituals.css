@@ -6,7 +6,7 @@
 body {
     background-color: #efedeb;
     margin: 0;
-    font-family:  'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -261,7 +261,7 @@ div#content>footer>small {
 @media (min-width:1024px) {
 
     /* Cabecera */
-    div#content>header{
+    div#content>header {
         padding: 2rem .5rem;
     }
 
@@ -270,7 +270,7 @@ div#content>footer>small {
         flex: 5rem 0;
     }
 
-    div#content>header>nav#menu-principal{
+    div#content>header>nav#menu-principal {
         display: flex;
         flex: 1;
         justify-content: center;
@@ -289,11 +289,12 @@ div#content>footer>small {
         flex: 1;
         padding: 0;
     }
-    div#content>header>nav#menu-principal>input:checked+ul>li{
+
+    div#content>header>nav#menu-principal>input:checked+ul>li {
         padding: 0;
     }
 
-    div#content>header>nav#menu-principal>ul{
+    div#content>header>nav#menu-principal>ul {
         display: flex;
         flex: 1;
         padding: 0;
@@ -302,11 +303,12 @@ div#content>footer>small {
         text-align: center;
         justify-content: space-evenly;
     }
-    div#content>header>nav#menu-principal>ul>li>a>span:nth-child(2){
+
+    div#content>header>nav#menu-principal>ul>li>a>span:nth-child(2) {
         display: none;
     }
 
-    
+
 
     /* Fin cabecera */
     /* Main */
@@ -336,17 +338,20 @@ div#content>footer>small {
 
     /* Fin Main */
     /* Footer */
-    div#content>footer{
+    div#content>footer {
         align-items: center;
     }
+
     div#content>footer>nav#menu-adicional {
         flex: 80%;
     }
-    div#content>footer>nav#menu-adicional>ul{
+
+    div#content>footer>nav#menu-adicional>ul {
         justify-content: space-evenly;
         align-items: center;
     }
-    div#content>footer>nav#menu-adicional>ul>li{
+
+    div#content>footer>nav#menu-adicional>ul>li {
         border: none;
         flex: 25%;
         padding: 0;
@@ -354,21 +359,25 @@ div#content>footer>small {
         text-align: center;
         align-items: center;
     }
-    div#content>footer>nav#menu-adicional>ul>li>span:nth-child(2){
+
+    div#content>footer>nav#menu-adicional>ul>li>span:nth-child(2) {
         display: none;
     }
 
-    div#content>footer>nav#menu-social{
+    div#content>footer>nav#menu-social {
         flex: 20%;
         justify-content: flex-start;
     }
+
     div#content>footer>nav#menu-social>ul {
         align-items: center;
         padding-right: 2rem;
     }
-    div#content>footer>nav#menu-social>ul>li{
+
+    div#content>footer>nav#menu-social>ul>li {
         flex: 3rem 0;
     }
+
     /* Fin Footer */
 }
 
