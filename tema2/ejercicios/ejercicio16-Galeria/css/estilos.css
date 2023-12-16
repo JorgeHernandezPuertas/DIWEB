@@ -1,0 +1,120 @@
+/* Etiquetas generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background: url("../images/background.jpg") no-repeat fixed;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:visited {
+        color: black
+    }
+}
+
+/* Fin de etiquetas generales */
+
+/* Etiquetas específicas */
+/* Pongo primero estas reglas de estilo por el orden y para que funcione bien */
+div.row>div.columns>ul>li {
+    &:nth-child(1) {
+        transform: rotate(-3deg);
+    }
+
+    &:nth-child(2) {
+        transform: rotate(4deg);
+    }
+
+    &:nth-child(3) {
+        transform: rotate(0deg);
+    }
+
+    &:nth-child(4) {
+        transform: rotate(2deg);
+    }
+
+    &:nth-child(5) {
+        transform: rotate(5deg);
+    }
+
+    &:nth-child(6) {
+        transform: rotate(-2deg);
+    }
+
+    &:nth-child(7) {
+        transform: rotate(-1deg);
+    }
+
+    &:nth-child(8) {
+        transform: rotate(2deg);
+    }
+
+    &:nth-child(9) {
+        transform: rotate(-1deg);
+    }
+
+    &:nth-child(10) {
+        transform: rotate(3deg);
+    }
+
+    &:nth-child(11) {
+        transform: rotate(-4deg);
+
+    }
+
+    &:nth-child(12) {
+        transform: rotate(6deg);
+    }
+}
+div.row>div.columns>ul {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3rem;
+
+    & li {
+        flex: 20.1% 0;
+        padding: .5rem;
+        background: white;
+        margin-bottom: 2rem;
+        text-align: center;
+        transition:all 1s ease;
+        & a::after {
+            content: attr(title) ;
+        }
+        & a img {
+            transition: width 1s ease;
+        }
+        &:hover {
+            transition:transform 1s ease;
+            transform: rotate(0);
+            & a img {
+                transition: width 1s ease;
+                width: 102%;
+            }
+        }
+    }
+}
+
+
+
+/* Fin de etiquetas específicas */
