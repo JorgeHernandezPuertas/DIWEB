@@ -12,8 +12,8 @@
     <section id="inicio-sesion">
         <form action="ejercicio4.html" method="post">
             <h2>Iniciar sesión</h2>
-            <input type="email" name="email" id="email" placeholder="Email" aria-label="Introduce tu e-mail:"
-            pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" title="E-mail" required>
+            <input type="text" name="email" id="email" aria-label="Introduce tu e-mail:" title="E-mail" required>
+            <label for="email"><span>Email</span></label>
             <input type="password" name="psw" id="psw" placeholder="Contraseña" aria-label="Introduce tu contraseña:"
                     pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" title="Password" required>
             <a href="#">Recuperar contraseña</a>

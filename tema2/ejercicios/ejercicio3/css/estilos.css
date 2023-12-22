@@ -13,6 +13,7 @@ section#inicio-sesion form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20rem;
     margin: 0 auto;
 }
 
@@ -24,10 +25,12 @@ section#inicio-sesion form input {
     border: none;
     border-bottom: 1px solid darkgray;
     margin-bottom: 1.5em;
-    width: 80%;
+    width: 100%;
     max-width: 20rem;
     padding: 1em;
+    padding-top:1.5rem;
     font-size: 1em;
+    outline: none;
 }
 
 section#inicio-sesion form input::placeholder {
@@ -59,3 +62,46 @@ section#inicio-sesion form button {
 section#inicio-sesion form button:hover {
     background-color: rgb(53, 53, 53);
 }
+/* Animación placeholder */
+section > form{
+    position: relative;
+    overflow: hidden;
+}
+section > form > label {
+    position: absolute;
+    top: 138px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+section > form > label:after {
+    content: '';
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 100%;
+    max-width: 20rem;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+}
+section > form > label > span{
+    position: absolute;
+    top: 0px;
+    left: 1rem;
+    margin: 0 auto;
+    transition: transform .3s ease, color .3s ease, font-size .3s ease;
+}
+section > form > input#email:focus + label:after, section > form > input#email:valid + label:after {
+    transform: translateX(0);
+    transition: transform .3s ease;
+}
+section > form > input#email:focus + label > span, section > form > input#email:valid + label > span{
+    transform: translateY(-1.5rem);
+    color: #2ecece;
+    font-size: .8rem;
+    transition: transform .3s ease, color .3s ease, font-size .3s ease;
+}
+/* Fin animación placeholder */
