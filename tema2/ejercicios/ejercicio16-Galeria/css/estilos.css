@@ -97,19 +97,20 @@ div.row>div.columns>ul {
         background: white;
         margin-bottom: 2rem;
         text-align: center;
-        transition:all 1s ease;
-        & a::after {
-            content: attr(title) ;
+        transition:all .5s ease;
+        & a:after {
+            content: attr(title);
         }
         & a img {
-            transition: width 1s ease;
+            transition: transform .5s ease;
+            transform: scale(1,1);
         }
         &:hover {
-            transition:transform 1s ease;
+            transition:transform .5s ease;
             transform: rotate(0);
             & a img {
-                transition: width 1s ease;
-                width: 102%;
+                transition: transform .5s ease;
+                transform: scale(1.04,1.04);
             }
         }
     }
