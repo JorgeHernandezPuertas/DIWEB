@@ -1,0 +1,26 @@
+/* Etiquetas generales */
+* {
+  box-sizing: border-box;
+}
+
+/* Fin etiquetas generales */
+/* Etiquetas específicas */
+div#reproductor {
+  background-color: #1F414F;
+}
+
+div#reproductor button {
+  background-color: inherit;
+  border: none;
+
+}
+
+div#reproductor button svg {
+  fill: #FFFFFF;
+}
+
+div#reproductor input[type="range"] {
+  color: #1F414F;
+}
+
+/* Fin etiquetas específicas */
