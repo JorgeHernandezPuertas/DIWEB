@@ -6,24 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tema 3 Ejercicio 1 - Reproductor</title>
   <link rel="stylesheet" href="styles/style.css" type="text/css">
-  <script src="scripts/reproductorClicks.js"></script>
 </head>
 
 <body>
+
   <div id="contenedor">
     <main id="main">
       <div id="reproductor">
-        <button id="play/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <button id="play/pause" class="play"><svg id="play" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
             <path d="M7 6v12l10-6z"></path>
-          </svg></button>
-        <button id="pause"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          </svg><svg id="pause" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M8 7h3v10H8zm5 0h3v10h-3z"></path>
           </svg></button>
-        <input type="range">
-        <audio src="audios/hotel-california.m4a"></audio>
+        <input id="volume" type="range">
+        <span id="tiempo-actual"></span>
+        <input id="duration" type="range">
+        <span id="tiempo-maximo"></span>
+        <audio id="audio">
+          <source src="audios/hotel-california.m4a">
+          <source src="audios/hotel-california.mp3">
+        </audio>
       </div>
     </main>
   </div>
+  <!-- Cargo el script al final del html para que se carguen primero todos los elementos html -->
+  <script src="./scripts/reproductorClicks.js"></script>
 </body>
 
 </html>
