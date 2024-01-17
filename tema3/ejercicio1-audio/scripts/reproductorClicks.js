@@ -10,8 +10,10 @@ botonPlayPause.addEventListener('click', () => {
   botonPlayPause.className = botonPlayPause.className === 'play' ? 'pause' : 'play'
   if (!audio.paused) {
     audio.pause()
+    console.log('Pausado') // Para saberlo en clase, que no se escucha
   } else {
     audio.play()
+    console.log('Reproduciendose') // Para saberlo en clase, que no se escucha
   }
 })
 
@@ -19,13 +21,13 @@ botonPlayPause.addEventListener('click', () => {
 const volumen = document.getElementById('volume')
 volumen.addEventListener('change', () => {
   const nuevoVolumen = volumen.value / 100
-  console.log(nuevoVolumen)
+  console.log(`El volumen ahora es: ${nuevoVolumen}`)
   audio.volume = nuevoVolumen
 })
 
 // Recupero el tiempo actual y lo establezco
 const tiempoActual = document.getElementById('tiempo-actual')
 tiempoActual.innerHTML = audio.currentTime
-audio.addEventListener('durationchange', () => {
+audio.currentTime.addEventListener('change', () => {
   tiempoActual.innerHTML = audio.currentTime
 })
