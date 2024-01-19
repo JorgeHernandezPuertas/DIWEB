@@ -31,7 +31,20 @@ div#reproductor button.pause svg#play {
   display: none;
 }
 
+
 /* Fin cambio de icono en el play/pause */
+
+/* Cambio de icono en el mute/unmuted */
+div#reproductor button.muted svg#unmuted {
+  display: none;
+}
+
+div#reproductor button.unmuted svg#muted {
+  display: none;
+}
+
+
+/* Fin cambio de icono en el mute/unmuted */
 
 div#reproductor input[type="range"] {
   color: #1F414F;
