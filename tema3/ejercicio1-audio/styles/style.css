@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Fin etiquetas generales */
 /* Etiquetas específicas */
 div#reproductor {
@@ -10,6 +14,9 @@ div#reproductor {
   max-width: 40rem;
   border-radius: 4rem;
   padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 div#reproductor button {
@@ -45,10 +52,14 @@ div#reproductor button.unmuted svg#muted {
 
 
 /* Fin cambio de icono en el mute/unmuted */
-
+/* Cambio el estilo de las barras */
 div#reproductor input[type="range"] {
-  color: #1F414F;
+  height: 10px;
+  border-radius: 20rem;
+  background-image: linear-gradient(to right, #02C38A calc(var(attr(value))*1%), black 0);
 }
+
+/* Fin al cambio el estilo de las barras */
 
 div#reproductor span {
   color: #FFF;

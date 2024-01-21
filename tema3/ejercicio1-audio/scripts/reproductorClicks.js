@@ -11,9 +11,23 @@ const botonPlayPause = document.getElementById('play/pause')
 const botonVolumen = document.getElementById('boton-volumen')
 const barraVolumen = document.getElementById('barra-volumen')
 const barraDuracion = document.getElementById('barra-duracion')
+const botonStop = document.getElementById('boton-stop')
+const botonRestart = document.getElementById('boton-reiniciar')
 
 // Establezco el preload del audio en metadata para solo cargarlo entero cuando se requiere
 audio.preload = 'metadata'
+
+// Le añado su funcionalidad al boton reinicio
+botonRestart.addEventListener('click', () => {
+  audio.currentTime = 0
+})
+
+// Le añado su funcionadad al boton stop
+botonStop.addEventListener("click", () => {
+  audio.pause()
+  botonPlayPause.className = "play"
+  audio.currentTime = 0
+})
 
 // Le añado su funcionalidad al boton play/pause
 botonPlayPause.addEventListener('click', () => {
