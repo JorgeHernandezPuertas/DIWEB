@@ -46,7 +46,7 @@ tiempoActual.innerHTML = '00:00'
 audio.addEventListener('timeupdate', () => {
   const tiempo = Number.parseInt(audio.currentTime)
   tiempoActual.innerHTML = formatTime(tiempo)
-  barraDuracion.setAttribute('value', Number.parseInt(100 / audio.duration * tiempo))
+  barraDuracion.value = Number.parseInt(100 * tiempo / audio.duration)
 })
 
 // Función que formatea el tiempo del audio al formato que quiero mostrar
@@ -66,7 +66,7 @@ audio.addEventListener('durationchange', (e) => {
 })
 
 // Controlo el cambio manual de la barra de duración
-barraDuracion.addEventListener("change" ,(e) => {
+barraDuracion.addEventListener("change", (e) => {
   // Calculo el tiempo correspondiente al valor de la barra
   audio.currentTime = (Number.parseInt(e.target.value * audio.duration / 100))
 })
@@ -80,7 +80,6 @@ barraVolumen.addEventListener('change', () => {
   }
 
   const nuevoVolumen = barraVolumen.value / 100
-  console.log(`El volumen ahora es: ${nuevoVolumen}`)
   audio.volume = nuevoVolumen
 })
 
@@ -101,7 +100,7 @@ botonVolumen.addEventListener('click', () => {
 
 // Controlo que cada vez que se cambie el volumen por cualquier lado, se sincronice la barra
 audio.addEventListener('volumechange', () => {
-  barraVolumen.setAttribute("value", audio.volume * 100)
+  barraVolumen.value = audio.volume * 100
 })
 
 // Cuando acaba la canción reseteo el botón de play
