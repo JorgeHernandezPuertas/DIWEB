@@ -5,24 +5,22 @@
 
 button {
   cursor: pointer;
+  background-color: inherit;
+  border: none;
+  flex: 1;
+  max-width: 2.5rem;
 }
 
 /* Fin etiquetas generales */
 /* Etiquetas específicas */
 div#reproductor {
   background-color: #1F414F;
-  max-width: 40rem;
+  max-width: 35rem;
+  min-width: 35rem;
   border-radius: 4rem;
   padding: 1rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-}
-
-div#reproductor button {
-  background-color: inherit;
-  border: none;
-
 }
 
 div#reproductor button svg {
@@ -45,16 +43,64 @@ div#reproductor button.pause svg#play {
 
 /* Fin cambio de icono en el play/pause */
 
-/* Cambio de icono en el mute/unmuted */
-div#reproductor button.muted svg#unmuted {
-  display: none;
+div#reproductor div#caja-tiempo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+
+  input[type="range"] {
+    padding: 0 .3rem;
+  }
+
+  span {
+    color: #FFF;
+    font-size: .8rem;
+    line-height: 1rem;
+  }
 }
 
-div#reproductor button.unmuted svg#muted {
-  display: none;
-}
+div#reproductor div#caja-volumen {
+  display: flex;
+  place-items: center;
+  position: relative;
+  flex: 1;
 
-/* Fin cambio de icono en el mute/unmuted */
+  /* Añado el volumen desplegable y sus animaciones */
+  input[type="range"] {
+    /* Le añado padding para que no se cierre al separar un poco el raton */
+    padding: .5rem 0;
+    width: 0;
+    transition: width 1s ease;
+    position: absolute;
+    left: 2.7rem;
+    bottom: .05rem;
+
+    &::-webkit-slider-thumb {
+      visibility: hidden;
+      transition: visibility .3s ease;
+    }
+
+    &:hover::-webkit-slider-thumb {
+      visibility: visible;
+      transition: visibility .3s ease;
+    }
+  }
+
+  &:hover {
+    input[type="range"] {
+      display: initial;
+      width: 6rem;
+      transition: width .5s ease;
+
+      &::-webkit-slider-thumb {
+        visibility: visible;
+      }
+    }
+  }
+
+  /* Fin del volumen desplegable */
+}
 
 /* Cambio el estilo de las barras */
 div#reproductor input[type="range"] {
@@ -67,7 +113,9 @@ div#reproductor input[type="range"] {
   &::-webkit-slider-runnable-track {
     height: 0.5rem;
     border-radius: 20rem;
-    background: #053a5f;
+    background: #8FAAB5;
+    /* Por compatibilidad en los navegadores antiguos */
+    background: linear-gradient(to right, #8FAAB5 calc(var(--value) * 1%), #606063 0);
   }
 
   &::-webkit-slider-thumb {
@@ -78,15 +126,21 @@ div#reproductor input[type="range"] {
     height: .8rem;
     width: .8rem;
     border-radius: 100%;
-    background-color: #5cd5eb;
     border: none;
+    background-color: #FFF;
+  }
+
+  &:hover::-webkit-slider-thumb {
+    background-color: #DDD;
   }
 
   /* Cambio el slider para mozilla */
   &::-moz-range-track {
     height: 0.5rem;
     border-radius: 20rem;
-    background: #053a5f;
+    background: #8FAAB5;
+    /* Por compatibilidad en los navegadores antiguos */
+    background: linear-gradient(to right, #8FAAB5 calc(var(--value) * 1%), #606063 0);
   }
 
   &::-moz-range-thumb {
@@ -97,16 +151,35 @@ div#reproductor input[type="range"] {
     height: .8rem;
     width: .8rem;
     border-radius: 100%;
-    background-color: #5cd5eb;
+    background-color: #FFF;
     border: none;
+  }
+
+  &:hover::-moz-range-thumb {
+    background-color: #DDD;
   }
 }
 
 /* Fin al cambio el estilo de las barras */
 
-div#reproductor span {
-  color: #FFF;
-  font-size: .8rem;
+/* Cambio de icono en el mute/unmuted */
+div#reproductor button.muted svg#unmuted {
+  display: none;
+}
+
+div#reproductor button.unmuted svg#muted {
+  display: none;
+}
+
+/* Fin cambio de icono en el mute/unmuted */
+
+div#reproductor button.loop svg,
+div#reproductor button.acelerado svg {
+  fill: #369E82;
+
+  &:hover {
+    fill: #2F8A71;
+  }
 }
 
 /* Fin etiquetas específicas */
