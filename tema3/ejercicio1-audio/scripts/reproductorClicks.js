@@ -66,9 +66,9 @@ audio.addEventListener('durationchange', (e) => {
 })
 
 // Controlo el cambio manual de la barra de duración
-barraDuracion.addEventListener('change', () => {
+barraDuracion.addEventListener("change" ,(e) => {
   // Calculo el tiempo correspondiente al valor de la barra
-  audio.currentTime = (Number.parseInt(barraDuracion.value * audio.duration / 100))
+  audio.currentTime = (Number.parseInt(e.target.value * audio.duration / 100))
 })
 
 // Doy funcionalidad a la barra de volumen
