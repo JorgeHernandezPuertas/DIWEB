@@ -62,7 +62,7 @@ div#reproductor div#caja-tiempo {
 
 div#reproductor div#caja-volumen {
   display: flex;
-  place-items: center;
+  align-items: center;
   position: relative;
   flex: 1;
 
@@ -74,15 +74,14 @@ div#reproductor div#caja-volumen {
     transition: width 1s ease;
     position: absolute;
     left: 2.7rem;
-    bottom: .05rem;
 
     &::-webkit-slider-thumb {
       visibility: hidden;
       transition: visibility .3s ease;
     }
 
-    &:hover::-webkit-slider-thumb {
-      visibility: visible;
+    &::-moz-range-thumb {
+      visibility: hidden;
       transition: visibility .3s ease;
     }
   }
@@ -94,6 +93,10 @@ div#reproductor div#caja-volumen {
       transition: width .5s ease;
 
       &::-webkit-slider-thumb {
+        visibility: visible;
+      }
+
+      &::-moz-range-thumb {
         visibility: visible;
       }
     }
