@@ -13,6 +13,8 @@ const barraVolumen = document.getElementById('barra-volumen')
 const barraDuracion = document.getElementById('barra-duracion')
 const botonStop = document.getElementById('boton-stop')
 const botonRestart = document.getElementById('boton-reiniciar')
+const botonRepeat = document.getElementById('boton-repeat')
+const botonAcelerar = document.getElementById('boton-acelerar')
 
 // Establezco el preload del audio en metadata para solo cargarlo entero cuando se requiere
 audio.preload = 'metadata'
@@ -45,8 +47,13 @@ botonPlayPause.addEventListener('click', () => {
 tiempoActual.innerHTML = '00:00'
 audio.addEventListener('timeupdate', () => {
   const tiempo = Number.parseInt(audio.currentTime)
-  tiempoActual.innerHTML = formatTime(tiempo)
-  barraDuracion.value = Number.parseInt(100 * tiempo / audio.duration)
+  const tiempoFormateado = formatTime(tiempo)
+  if (tiempoFormateado != tiempoActual.innerHTML) {
+    tiempoActual.innerHTML = tiempoFormateado
+    barraDuracion.value = Number.parseInt(100 * tiempo / audio.duration)
+    // Establezco el valor para el css y poder poner el color de la barra personalizado
+    barraDuracion.style.setProperty("--value", barraDuracion.value)
+  }
 })
 
 // Función que formatea el tiempo del audio al formato que quiero mostrar
@@ -70,6 +77,9 @@ barraDuracion.addEventListener("change", (e) => {
   // Calculo el tiempo correspondiente al valor de la barra
   audio.currentTime = (Number.parseInt(e.target.value * audio.duration / 100))
 })
+
+// Seteo el value de la duracion para antes de que empiece la cancion
+barraDuracion.style.setProperty("--value", barraDuracion.value)
 
 // Doy funcionalidad a la barra de volumen
 barraVolumen.addEventListener('change', () => {
@@ -101,9 +111,36 @@ botonVolumen.addEventListener('click', () => {
 // Controlo que cada vez que se cambie el volumen por cualquier lado, se sincronice la barra
 audio.addEventListener('volumechange', () => {
   barraVolumen.value = audio.volume * 100
+  // Establezco el valor para el css y poder poner el color de la barra personalizado
+  barraVolumen.style.setProperty("--value", barraVolumen.value)
 })
 
 // Cuando acaba la canción reseteo el botón de play
 audio.addEventListener("ended", () => {
-  botonPlayPause.className = 'play';
+  if (!audio.loop) {
+    botonPlayPause.className = 'play';
+  }
+})
+
+// Añado la funcionalidad del boton repeat
+botonRepeat.addEventListener("click", () => {
+  if (botonRepeat.className === "loop") {
+    audio.loop = false
+    botonRepeat.className = ""
+  } else {
+    audio.loop = true
+    botonRepeat.className = "loop"
+  }
+})
+
+// Añado la funcionalidad del boton acelerar
+botonAcelerar.addEventListener("click", () => {
+  if (botonAcelerar.className === "acelerado") {
+    audio.playbackRate = 1
+    botonAcelerar.className = ""
+    console.log()
+  } else {
+    audio.playbackRate = 2
+    botonAcelerar.className = "acelerado"
+  }
 })
