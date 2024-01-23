@@ -38,6 +38,12 @@
           </svg>
         </button>
         <div id="caja-tiempo">
+          <button id="boton-ralentizar" title="Ralentizar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="m8.121 12 4.94-4.939-2.122-2.122L3.879 12l7.06 7.061 2.122-2.122z"></path>
+              <path d="M17.939 4.939 10.879 12l7.06 7.061 2.122-2.122L15.121 12l4.94-4.939z"></path>
+            </svg>
+          </button>
           <button id="boton-retroceder">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M12 12V7l-7 5 7 5zm7-5-7 5 7 5z"></path>
@@ -45,10 +51,16 @@
           </button>
           <span id="tiempo-actual"></span>
           <input id="barra-duracion" type="range" value="0" min="0" max="100" step="1">
-          <span id="tiempo-maximo"></span>
+          <span id="tiempo-restante"></span>
           <button id="boton-avanzar">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="m19 12-7-5v10zM5 7v10l7-5z"></path>
+            </svg>
+          </button>
+          <button id="boton-acelerar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path>
+              <path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path>
             </svg>
           </button>
         </div>
@@ -70,12 +82,6 @@
           </button>
           <input id="barra-volumen" type="range" min="0" max="100" step="1">
         </div>
-        <button id="boton-acelerar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M10.296 7.71 14.621 12l-4.325 4.29 1.408 1.42L17.461 12l-5.757-5.71z"></path>
-            <path d="M6.704 6.29 5.296 7.71 9.621 12l-4.325 4.29 1.408 1.42L12.461 12z"></path>
-          </svg>
-        </button>
         <button id="boton-repeat">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path

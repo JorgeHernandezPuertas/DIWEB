@@ -15,20 +15,21 @@ button {
 /* Etiquetas específicas */
 div#reproductor {
   background-color: #1F414F;
-  max-width: 37rem;
-  min-width: 37rem;
+  max-width: 40rem;
+  min-width: 40rem;
   border-radius: .5rem;
-  padding: .5rem;
+  padding: .2rem;
   display: flex;
   flex-flow: wrap;
   align-items: center;
+  border: 2px solid #555;
 }
 
 div#reproductor video#video {
   /* Pongo width porque al flex el video no le hace caso */
   width: 100%;
-  border-radius: .5rem;
-  padding-bottom: .5rem;
+  border-radius: .5rem .5rem 0 0;
+  margin-bottom: .5rem;
 }
 
 div#reproductor button svg {
@@ -73,15 +74,16 @@ div#reproductor div#caja-volumen {
   align-items: center;
   position: relative;
   flex: 1;
+  justify-content: center;
 
   /* Añado el volumen desplegable y sus animaciones */
   input[type="range"] {
     /* Le añado padding para que no se cierre al separar un poco el raton */
-    padding: .5rem 0;
+    padding: .7rem 0;
     width: 0;
-    transition: width 1s ease;
+    transition: width .5s ease;
     position: absolute;
-    left: 2.7rem;
+    left: 3rem;
 
     &::-webkit-slider-thumb {
       visibility: hidden;
@@ -184,8 +186,7 @@ div#reproductor button.unmuted svg#muted {
 
 /* Fin cambio de icono en el mute/unmuted */
 
-div#reproductor button.loop svg,
-div#reproductor button.acelerado svg {
+div#reproductor button.pulsado svg {
   fill: #369E82;
 
   &:hover {

@@ -6,7 +6,7 @@ video.volume = 0.5
 
 // Recupero del dom todos los elementos que necesito
 const tiempoActual = document.getElementById('tiempo-actual')
-const tiempoMaximo = document.getElementById('tiempo-maximo')
+const tiempoRestante = document.getElementById('tiempo-restante')
 const botonPlayPause = document.getElementById('play/pause')
 const botonVolumen = document.getElementById('boton-volumen')
 const barraVolumen = document.getElementById('barra-volumen')
@@ -15,6 +15,10 @@ const botonStop = document.getElementById('boton-stop')
 const botonRestart = document.getElementById('boton-reiniciar')
 const botonRepeat = document.getElementById('boton-repeat')
 const botonAcelerar = document.getElementById('boton-acelerar')
+const botonRalentizar = document.getElementById('boton-ralentizar')
+const botonAvanzar = document.getElementById('boton-avanzar')
+const botonRetroceder = document.getElementById('boton-retroceder')
+const botonFullscreen = document.getElementById('boton-fullscreen')
 
 // Establezco el preload del video en metadata para solo cargarlo entero cuando se requiere
 video.preload = 'metadata'
@@ -22,6 +26,7 @@ video.preload = 'metadata'
 // Le añado su funcionalidad al boton reinicio
 botonRestart.addEventListener('click', () => {
   video.currentTime = 0
+  video.play()
 })
 
 // Le añado su funcionadad al boton stop
@@ -43,13 +48,15 @@ botonPlayPause.addEventListener('click', () => {
   }
 })
 
-// Le doy la funcionalidad al tiempo actual
+// Le doy la funcionalidad al tiempo actual y al restante
 tiempoActual.innerHTML = '00:00'
+tiempoRestante.innerHTML = formatTime(video.duration)
 video.addEventListener('timeupdate', () => {
   const tiempo = Number.parseInt(video.currentTime)
   const tiempoFormateado = formatTime(tiempo)
   if (tiempoFormateado != tiempoActual.innerHTML) {
     tiempoActual.innerHTML = tiempoFormateado
+    tiempoRestante.innerHTML = formatTime(Number.parseInt(video.duration - tiempo))
     barraDuracion.value = Number.parseInt(100 * tiempo / video.duration)
     // Establezco el valor para el css y poder poner el color de la barra personalizado
     barraDuracion.style.setProperty("--value", barraDuracion.value)
@@ -67,9 +74,8 @@ function formatTime (time) {
 }
 
 // Pongo el tiempo máximo de la canción y controlo sincronizar el cambio de duración
-tiempoMaximo.innerHTML = formatTime(video.duration)
 video.addEventListener('durationchange', (e) => {
-  tiempoMaximo.innerHTML = formatTime(e.target.duration)
+  tiempoRestante.innerHTML = formatTime(e.target.duration)
 })
 
 // Controlo el cambio manual de la barra de duración
@@ -116,31 +122,58 @@ video.addEventListener('volumechange', () => {
 })
 
 // Cuando acaba la canción reseteo el botón de play
-video.addEventListener("ended", () => {
+video.addEventListener('ended', () => {
   if (!video.loop) {
     botonPlayPause.className = 'play';
   }
 })
 
 // Añado la funcionalidad del boton repeat
-botonRepeat.addEventListener("click", () => {
-  if (botonRepeat.className === "loop") {
+botonRepeat.addEventListener('click', () => {
+  if (botonRepeat.className === 'pulsado') {
     video.loop = false
-    botonRepeat.className = ""
+    botonRepeat.className = ''
   } else {
     video.loop = true
-    botonRepeat.className = "loop"
+    botonRepeat.className = 'pulsado'
   }
 })
 
-// Añado la funcionalidad del boton acelerar
-botonAcelerar.addEventListener("click", () => {
-  if (botonAcelerar.className === "acelerado") {
+// Añado la funcionalidad del boton acelerar y al ralentizar
+botonAcelerar.addEventListener('click', () => {
+  if (botonAcelerar.className === 'pulsado') {
     video.playbackRate = 1
-    botonAcelerar.className = ""
-    console.log()
+    botonAcelerar.className = ''
   } else {
     video.playbackRate = 2
-    botonAcelerar.className = "acelerado"
+    botonAcelerar.className = 'pulsado'
+    if (botonRalentizar.className === "pulsado") botonRalentizar.className = ''
+  }
+})
+botonRalentizar.addEventListener('click', () => {
+  if (botonRalentizar.className === 'pulsado') {
+    video.playbackRate = 1
+    botonRalentizar.className = ''
+  } else {
+    video.playbackRate = .5
+    botonRalentizar.className = 'pulsado'
+    if (botonAcelerar.className === "pulsado") botonAcelerar.className = ''
+  }
+})
+
+// Añado funcionalidad al boton retroceder y al avanzar
+botonRetroceder.addEventListener('click', () => {
+  video.currentTime -= 10
+})
+botonAvanzar.addEventListener('click', () => {
+  video.currentTime += 10
+})
+
+// Añado la funcionalidad al boton de fullscreen
+botonFullscreen.addEventListener('click', () => {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { /* Para compatibilidad con Safari */
+    video.webkitRequestFullscreen();
   }
 })
