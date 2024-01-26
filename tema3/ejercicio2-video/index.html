@@ -19,18 +19,18 @@
           <source src="videos/trailer.mp4">
           <source src="videos/trailer.swf">
         </video>
-        <button id="play/pause" class="play"><svg id="play" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24">
+        <button id="play/pause" class="play" title="Play/Pause"><svg id="play" xmlns="http://www.w3.org/2000/svg"
+            width="24" height="24" viewBox="0 0 24 24">
             <path d="M7 6v12l10-6z"></path>
           </svg><svg id="pause" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M8 7h3v10H8zm5 0h3v10h-3z"></path>
           </svg></button>
-        <button id="boton-stop">
+        <button id="boton-stop" title="Stop">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M7 7h10v10H7z"></path>
           </svg>
         </button>
-        <button id="boton-reiniciar">
+        <button id="boton-reiniciar" title="Reiniciar">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               d="M19.89 10.105a8.696 8.696 0 0 0-.789-1.456l-1.658 1.119a6.606 6.606 0 0 1 .987 2.345 6.659 6.659 0 0 1 0 2.648 6.495 6.495 0 0 1-.384 1.231 6.404 6.404 0 0 1-.603 1.112 6.654 6.654 0 0 1-1.776 1.775 6.606 6.606 0 0 1-2.343.987 6.734 6.734 0 0 1-2.646 0 6.55 6.55 0 0 1-3.317-1.788 6.605 6.605 0 0 1-1.408-2.088 6.613 6.613 0 0 1-.382-1.23 6.627 6.627 0 0 1 .382-3.877A6.551 6.551 0 0 1 7.36 8.797 6.628 6.628 0 0 1 9.446 7.39c.395-.167.81-.296 1.23-.382.107-.022.216-.032.324-.049V10l5-4-5-4v2.938a8.805 8.805 0 0 0-.725.111 8.512 8.512 0 0 0-3.063 1.29A8.566 8.566 0 0 0 4.11 16.77a8.535 8.535 0 0 0 1.835 2.724 8.614 8.614 0 0 0 2.721 1.833 8.55 8.55 0 0 0 5.061.499 8.576 8.576 0 0 0 6.162-5.056c.22-.52.389-1.061.5-1.608a8.643 8.643 0 0 0 0-3.45 8.684 8.684 0 0 0-.499-1.607z">
@@ -38,13 +38,13 @@
           </svg>
         </button>
         <div id="caja-tiempo">
-          <button id="boton-ralentizar" title="Ralentizar">
+          <button id="boton-ralentizar" title="Ralentizar x2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="m8.121 12 4.94-4.939-2.122-2.122L3.879 12l7.06 7.061 2.122-2.122z"></path>
               <path d="M17.939 4.939 10.879 12l7.06 7.061 2.122-2.122L15.121 12l4.94-4.939z"></path>
             </svg>
           </button>
-          <button id="boton-retroceder">
+          <button id="boton-retroceder" title="Retroceder">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M12 12V7l-7 5 7 5zm7-5-7 5 7 5z"></path>
             </svg>
@@ -52,12 +52,12 @@
           <span id="tiempo-actual"></span>
           <input id="barra-duracion" type="range" value="0" min="0" max="100" step="1">
           <span id="tiempo-restante"></span>
-          <button id="boton-avanzar">
+          <button id="boton-avanzar" title="Avanzar">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="m19 12-7-5v10zM5 7v10l7-5z"></path>
             </svg>
           </button>
-          <button id="boton-acelerar">
+          <button id="boton-acelerar" title="Acelerar x2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path>
               <path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path>
@@ -65,7 +65,7 @@
           </button>
         </div>
         <div id="caja-volumen">
-          <button id="boton-volumen" class="unmuted">
+          <button id="boton-volumen" class="unmuted" title="Mute/Unmute">
             <svg id="unmuted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path
                 d="M16 21c3.527-1.547 5.999-4.909 5.999-9S19.527 4.547 16 3v2c2.387 1.386 3.999 4.047 3.999 7S18.387 17.614 16 19v2z">
@@ -82,14 +82,14 @@
           </button>
           <input id="barra-volumen" type="range" min="0" max="100" step="1">
         </div>
-        <button id="boton-repeat">
+        <button id="boton-repeat" title="Bucle">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               d="m13 7.101.01.001a4.978 4.978 0 0 1 2.526 1.362 5.005 5.005 0 0 1 1.363 2.528 5.061 5.061 0 0 1-.001 2.016 4.976 4.976 0 0 1-1.363 2.527l1.414 1.414a7.014 7.014 0 0 0 1.908-3.54 6.98 6.98 0 0 0 0-2.819 6.957 6.957 0 0 0-1.907-3.539 6.97 6.97 0 0 0-2.223-1.5 6.921 6.921 0 0 0-1.315-.408c-.137-.028-.275-.043-.412-.063V2L9 6l4 4V7.101zm-7.45 7.623c.174.412.392.812.646 1.19.249.37.537.718.854 1.034a7.036 7.036 0 0 0 2.224 1.501c.425.18.868.317 1.315.408.167.034.338.056.508.078v2.944l4-4-4-4v3.03c-.035-.006-.072-.003-.107-.011a4.978 4.978 0 0 1-2.526-1.362 4.994 4.994 0 0 1 .001-7.071L7.051 7.05a7.01 7.01 0 0 0-1.5 2.224A6.974 6.974 0 0 0 5 12a6.997 6.997 0 0 0 .55 2.724z">
             </path>
           </svg>
         </button>
-        <button id="boton-fullscreen">
+        <button id="boton-fullscreen" title="Fullscreen">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z"></path>
           </svg>
