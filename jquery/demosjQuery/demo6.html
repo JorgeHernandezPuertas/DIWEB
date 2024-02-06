@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Probando Callback</title>
+	<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<style type="text/css">
+		div#micapa {
+			background-color: #CC7700;
+			border-radius: 0.5rem;
+			color: #FFFFFF;
+			padding: 1rem;
+			width: 30%;
+			position: relative;
+			left: 0;
+			transition: left 1s ease;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$("#iniciar-llamadas").click(function (event) {
+				const elemento = $("#micapa")
+				let movimiento
+				if (elemento.css("left") === "0px") {
+					movimiento = "200px"
+				} else {
+					movimiento = "0px"
+				}
+				elemento.fadeOut(2000);
+				elemento.css({ left: movimiento });
+				elemento.fadeIn(2000);
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div id="micapa">
+		<p>Sin Callback los efectos no se repoducen siguiendo el orden de aparición en el código. En este ejemplo en primer
+			lugar se desplaza la capa hacia la derecha y a continuación, se reproducen los efectos de fadeOut y faceIn.</p>
+	</div>
+	<br>
+	<img src="play.png" alt="Reproducir animación" width="50" id="iniciar-llamadas">
+</body>
+
+</html>
