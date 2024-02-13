@@ -1,0 +1,164 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: wrap;
+    font-size: 16px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+}
+
+/* Acabo listas */
+/* Links */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+/* Acabo links */
+/* Imágenes */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Fin imágenes */
+/* Fin estilos generales */
+/* Estilos específicos */
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 100%;
+    padding: 0 1rem;
+}
+
+header>picture {
+    flex: 1;
+    text-align: center;
+}
+
+header>picture>img#logo {
+    width: 100px;
+}
+
+/* Menú principal */
+header>nav#menu-principal {
+    padding-right: 4rem;
+    order: -2;
+}
+
+/* Desplegar el menú */
+header>nav#menu-principal>input {
+    display: none;
+}
+
+header>nav#menu-principal>ul#menu {
+    display: none;
+}
+
+/* Como no se ve el estilo del desplegable, lo he puesto con fondo para que se leva bien */
+header>nav#menu-principal>input:checked+ul#menu {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    width: 50%;
+}
+
+/* Fin desplegar el menú */
+/* Fin menú principal */
+header>nav#buscador {
+    order: -1;
+}
+
+main {
+    display: flex;
+    flex-flow: wrap;
+}
+
+main>article.item {
+    display: flex;
+    flex-flow: column;
+    flex: 50% 0;
+    text-align: center;
+}
+
+main>article.item>a:nth-child(3) {
+    order: -1;
+}
+
+main>article.item>a {
+    /* Dejo el hueco entre fotos */
+    text-align: center;
+    padding: 0 2px;
+}
+
+main>article.item>p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    flex: 100%;
+}
+
+footer>nav#menu-adicional>ul {
+    padding: 0 0.25rem;
+}
+
+footer>nav#menu-adicional>ul>li {
+    border-bottom: 1px solid lightgrey;
+    padding: 0.25rem 0;
+}
+
+footer>nav#iconos-sociales>ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer>nav#iconos-sociales>ul>li {
+    padding: 0 0.5rem;
+    color: lightgrey;
+}
+
+footer>nav#iconos-sociales>ul>li>a {
+    color: grey;
+}
+
+/* Fin estilos específicos */
+
+/* Estilos para el scroll */
+.fixeado {
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    padding: 0 1rem;
+    padding-top: .5rem;
+    padding-right: 2rem;
+    opacity: .8;
+
+    nav#menu-principal>input:checked+ul#menu {
+        left: 0rem
+    }
+}
