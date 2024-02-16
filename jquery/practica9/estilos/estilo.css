@@ -1,0 +1,14 @@
+div#mi-capa {
+  background-color: black;
+  border-radius: 0.4rem;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+  left: 0;
+  width: 25%;
+}
+
+p {
+  margin: 0;
+}
