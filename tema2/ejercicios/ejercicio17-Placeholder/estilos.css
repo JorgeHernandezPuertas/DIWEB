@@ -1,3 +1,4 @@
+/* Etiquetas generales */
 * {
     box-sizing: border-box;
 }
@@ -20,7 +21,12 @@ form h1 {
     color: black;
 }
 
+/* Fin etiquetas generales */
+
+
+/* Etiquetas específicas */
 form input[type="text"] {
+    outline: none;
     width: 20rem;
     height: 2.5rem;
     margin-top: 1em;
@@ -29,6 +35,7 @@ form input[type="text"] {
 }
 
 form input[type="password"] {
+    outline: none;
     width: 20rem;
     height: 2.5rem;
     margin-top: 1.8rem;
@@ -39,6 +46,7 @@ form input[type="password"] {
 form a {
     margin-top: 1em;
     color: black;
+    position: relative;
 }
 
 form input[type="button"] {
@@ -58,6 +66,9 @@ form input[type="button"]:hover {
     cursor: pointer;
 }
 
+/* Fin etiquetas específicas */
+
+/* Animación del placeholder */
 form>label#label-correo {
     position: absolute;
     color: gray;
@@ -68,7 +79,7 @@ form>input[type="text"]:focus~label#label-correo,
 form>input[type="text"]:valid~label#label-correo {
     display: block;
     transition: transform 0.1s ease, top .1s ease, left .1s ease;
-    top: 6.4rem;
+    top: 6.1rem;
     left: 0.3rem;
     transform: scale(0.7);
 }
@@ -82,7 +93,35 @@ form>label#label-clave {
 form>input[type="password"]:focus~label#label-clave,
 form>input[type="password"]:valid~label#label-clave {
     transition: transform .1s ease, top .1s ease, left .1s ease;
-    top: 10.7rem;
+    top: 10.5rem;
     left: 0;
     transform: scale(.7);
 }
+
+/* Fin animación del placeholder */
+
+/* Animación de la barra de color */
+form div.barra {
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: width .3s ease;
+}
+
+form>input[type="text"]:focus~div.barra#barra1,
+form>input[type="text"]:valid~div.barra#barra1 {
+    position: absolute;
+    top: 8.72rem;
+    width: 20rem;
+    transition: width .3s ease;
+}
+
+form>input[type="password"]:focus~div.barra#barra2,
+form>input[type="password"]:valid~div.barra#barra2 {
+    position: absolute;
+    top: 13.1rem;
+    width: 20rem;
+    transition: width .3s ease;
+}
+
+/* Fin de animación de la barra de color */
