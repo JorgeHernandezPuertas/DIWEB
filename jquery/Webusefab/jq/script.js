@@ -4,13 +4,31 @@ $(function () {
   $(window).on({
     "scroll": function () {
       const scrolleado = $(this).scrollTop()
-      if (scrolleado > 80 && $("#volverarriba").css("display") === "none") {
+      if (scrolleado > 130 && $("#volverarriba").css("display") === "none") {
+        // Efectos del boton
         // Controlo que en caso de acumulación, solo se anime el último
         $("#volverarriba").stop(false, true)
         $("#volverarriba").fadeIn("slow")
-      } else if (scrolleado < 80 && $("#volverarriba").css("display") !== "none") {
+
+        // Efectos de fixed
+        $("#top").stop(false, true)
+        $("#top").css({
+          'position': "fixed",
+          'width': "100%",
+          'height': "0px",
+          'overflow': "hidden"
+        }).animate({
+          'height': "130px",
+          'opacity': ".7"
+        }, 500)
+      } else if (scrolleado < 130 && $("#volverarriba").css("display") !== "none") {
+        // Efectos del boton
         $("#volverarriba").stop(false, true)
         $("#volverarriba").fadeOut("slow")
+
+        // Efectos de fixed
+        $("#top").stop(false,true)
+        $("#top").removeAttr("style").css({ 'opacity': '.7' }).animate({ 'opacity': "1" }, 500)
       }
     }
   })
@@ -47,25 +65,44 @@ $(function () {
   })
 
   // Animo el submenú
-  $("#menu li").on({
+  $("#menu li a").on({
     "click": function () {
-      // Controlo la flechita
-      if ($(this).find("i").css("tranform") === "rotate(180deg)") {
-        $(this).find("i").css({
+      // Animo el despliegue
+      // En caso de spam de animaciones, ejecuto solo la última
+      $(this).siblings("ul").stop(false, true)
+      if ($(this).parent("li").children("ul").css("display") === "none"){
+        
+        $("#menu li").children("ul").slideUp()
+        $(this).siblings("ul").slideDown()
+        // Controlo la flechita
+        $("#menu i").css({
           "transform": "rotate(0deg)",
           "transition": "transform .1s ease"
         })
-      } else {
+
         $(this).find("i").css({
           "transform": "rotate(180deg)",
           "transition": "transform .1s ease"
         })
+      } else {
+        $(this).siblings("ul").slideUp()
+        // controlo la flechita
+        $(this).find("i").css({
+          "transform": "rotate(0deg)",
+          "transition": "transform .1s ease"
+        })
       }
+    }
+  })
 
-
-
-      // Animo el despliegue
-      $(this).children("ul").slideToggle()
+  // Cambio la imagen al poner el ratón encima
+  $(".item a picture img").on({
+    // Al entrar pongo la imagen 2
+    "mouseenter": function () {
+      $(this).attr("src", $(this).attr("src").replace(".", "-1."))
+    }, // Al salir pongo la imagen 1
+    "mouseleave": function () {
+      $(this).attr("src", $(this).attr("src").replace("-1.", "."))
     }
   })
 })
