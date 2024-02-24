@@ -1,0 +1,570 @@
+/* Fuentes */
+@font-face {
+  font-family: roboto-regular;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: spartan;
+  src: url(../fonts/spartan/static/LeagueSpartan-Bold.ttf);
+}
+
+/* Fin fuentes */
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: roboto-regular;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 375px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.contenedor {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.tachado {
+  text-decoration: line-through;
+}
+
+/* Fin estilos generales */
+
+/* Estilos específicos */
+
+/* Cabecera */
+header#cabecera {
+  flex: 100%;
+  display: flex;
+  flex-flow: wrap;
+  background-color: #1F414F;
+  color: #FFF;
+  position: relative;
+
+  &>div {
+    display: flex;
+    flex-flow: wrap;
+    flex: 100%;
+    padding-inline: 19px;
+  }
+
+  &>#cabecera-superior {
+    align-items: center;
+    margin-bottom: 10px;
+
+    &>#hamburguesa {
+      cursor: pointer;
+    }
+
+    &>.logo {
+      flex: 1;
+      padding-inline: 9px;
+
+      &>a {
+        font-family: spartan;
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+
+    &>label#usuario {
+      width: 30px;
+      height: 30px;
+      margin-right: 17px;
+      cursor: pointer;
+    }
+
+    &>label#carrito {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+
+      &>#num-carrito {
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 10px;
+        text-align: center;
+        position: absolute;
+        top: -7px;
+        left: 23px;
+        background-color: #D5290C;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &>#cabecera-inferior {
+    flex: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 22px;
+
+    &>#lupa {
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      top: 2px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    &>input {
+      flex: 1;
+      border: 2px solid #000;
+      height: 35px;
+    }
+
+  }
+
+  /* Desplegable */
+  &>nav#menu {
+    display: none;
+    position: absolute;
+    background-color: #1F414F;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 55px;
+    left: 0;
+
+    &>ul#menu-principal {
+      display: flex;
+      flex-flow: column;
+      flex: 100%;
+      padding: 0 14px;
+
+      &>li {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 36px;
+        align-items: center;
+        height: 68px;
+        border-top: 1px solid #A2A2B0;
+
+
+
+        &:nth-child(4) {
+          height: auto;
+
+          &>div {
+            height: 68px;
+            display: flex;
+            flex-flow: row;
+            padding: 0 .5rem 0 0;
+            flex: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            &>span {
+              display: flex;
+              align-items: center;
+              flex: 26px 0;
+            }
+          }
+        }
+
+        /* Fin desplegable */
+
+        &:nth-child(5) {
+          padding-top: 24px;
+          height: auto;
+
+          &>div {
+            display: flex;
+            flex: 1;
+            flex-flow: row wrap;
+            padding: 0;
+            align-items: center;
+
+
+            &>nav.redes {
+              display: flex;
+              flex: 100%;
+              justify-content: space-around;
+              padding-block: 1rem;
+              margin-inline: 20px;
+              align-items: center;
+
+              &>label {
+                flex: 70px 0;
+              }
+
+              &>label.X {
+                flex: 50px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+/* Submenu desplegable (lo hago aparte porque con la anidación daba problemas) */
+ul#submenu {
+  flex: 100%;
+  display: flex;
+  flex-flow: wrap;
+  padding: 0;
+
+  &>li {
+    display: flex;
+    align-items: center;
+    flex: 100%;
+    height: 68px;
+    font-weight: normal;
+    border-top: 1px solid #A2A2B0;
+
+    &>a {
+      flex: 100%;
+    }
+  }
+}
+
+
+/* Fin submenu desplegable */
+/* Main */
+#homepage>main {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+
+
+  &>section {
+    display: flex;
+    flex: 100%;
+    position: relative;
+    flex-flow: wrap;
+    justify-content: center;
+    padding-inline: 12px;
+    overflow: hidden;
+    min-height: 1021px;
+    max-height: 1021px;
+
+    &>h2 {
+      color: #1F414F;
+      font-size: 40px;
+      border-bottom: 1px solid #A2A2B0;
+      flex: 100%;
+      padding-bottom: .5rem;
+    }
+
+    &>span {
+      position: absolute;
+      top: 50px;
+      right: 14px;
+
+      &>a {
+        color: #D5290C;
+      }
+    }
+
+    &>article.libro {
+      flex: 406px 0;
+      display: flex;
+      flex-flow: wrap;
+      border-bottom: 1px solid #A2A2B0;
+      padding-bottom: 1rem;
+      margin-right: 1rem;
+
+      &>header {
+        display: flex;
+        flex: 100%;
+        border-bottom: 1px solid #A2A2B0;
+        padding-inline: 15px;
+        min-height: 633px;
+        max-height: 633px;
+        align-items: normal;
+        flex-flow: wrap;
+
+        &>a>img {
+          height: 576px;
+        }
+
+        &>span.tipo {
+          display: flex;
+          align-items: center;
+          height: 44px;
+        }
+      }
+
+      &>div.info {
+        display: flex;
+        flex: 100%;
+        justify-content: center;
+        flex-flow: wrap;
+        height: 184px;
+
+        &>h3 {
+          flex: 100%;
+          text-align: center;
+          font-size: 25px;
+          margin: 0;
+          padding-block: .75rem;
+        }
+
+        &>h4 {
+          text-align: center;
+          font-size: 25px;
+          color: #606063;
+          font-weight: normal;
+          margin: 0;
+          padding-bottom: 1rem;
+          flex: 100%;
+        }
+
+        &>span {
+          font-size: 35px;
+          font-weight: bold;
+          color: #606063;
+        }
+
+        &>span.tachado {
+          flex: 100%;
+          text-align: center;
+          position: relative;
+          color: #9D9EA3;
+          font-size: 20px;
+
+          &>span.porcentaje {
+            position: absolute;
+            background-color: #D5290C;
+            color: #FFF;
+            width: 60px;
+            line-height: 27px;
+            text-align: center;
+            border-radius: .25rem;
+            right: 90px;
+            top: -2px;
+          }
+        }
+
+        &>span.rebajado {
+          font-size: 35px;
+          font-weight: bold;
+          flex: 100%;
+          text-align: center;
+          justify-self: start;
+          color: #D5290C;
+        }
+      }
+
+      &>footer.envio {
+        display: flex;
+        flex: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-inline: 10px;
+        padding-top: 1rem;
+
+        &>span {
+          font-size: 30px;
+          color: #1F5C4C;
+          font-weight: bold;
+          line-height: 35px;
+        }
+
+        & img {
+          width: 30px;
+        }
+
+        &>img:nth-child(2) {
+          position: absolute;
+          left: 180px;
+        }
+      }
+    }
+  }
+}
+
+/* Fin main */
+/* Fin de cabecera */
+
+/* Footer */
+#footer {
+  margin-top: 3rem;
+  flex: 100%;
+  background-color: #1F414F;
+  display: flex;
+  flex-flow: wrap;
+  padding-inline: 12px;
+
+  & #footer-superior {
+    display: flex;
+    flex: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-inline: 50px;
+    padding-block: 1rem;
+
+    & label {
+      flex: 70px 0;
+    }
+
+    & label.X {
+      flex: 50px 0;
+    }
+  }
+
+  & #footer-inferior {
+    flex: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #FFF;
+    padding-block: 2rem;
+
+    & a {
+      font-size: 16px;
+      flex: 86px 0;
+      text-align: center;
+
+      &:last-child {
+        flex: 33px 0;
+      }
+    }
+  }
+}
+
+/* Fin de footer */
+
+/* Fin estilos específicos */
+
+
+
+
+
+/* Breakpoints */
+/* Tablet */
+@media (min-width: 860px) {
+
+  /* Cabecera */
+  #cabecera h1.logo {
+    text-align: center;
+  }
+
+  /* Fin cabecera */
+
+  /* Footer */
+  #footer #footer-inferior a {
+    flex: 166px 0;
+
+    &:last-child {
+      flex: 33px 0;
+    }
+  }
+
+  /* Fin footer */
+}
+
+/* Fin tablet */
+
+/* Escritorio */
+@media (min-width: 1325px) {
+
+  /* Header */
+  header#cabecera>nav#menu>ul#menu-principal>li:nth-child(5) {
+    display: none;
+  }
+
+  header#cabecera h1.logo {
+    text-align: left;
+  }
+
+  header#cabecera label#hamburguesa {
+    display: none;
+  }
+
+  header#cabecera nav#menu {
+    display: flex;
+    position: relative;
+    flex: 100%;
+    top: 0;
+
+    & ul#menu-principal {
+      flex-flow: row;
+      flex: 100%;
+
+      &>li {
+        flex: 12.5%;
+        border: none;
+        font-weight: normal;
+        border-right: 1px solid #A2A2B0;
+        text-align: center;
+        justify-content: center;
+        padding: 0 5px;
+        height: 36px;
+
+        &:nth-child(4) {
+          flex: 62.5%;
+          border: none;
+          justify-content: center;
+          padding: 0;
+
+          &>div {
+            flex: 16.6666% 0;
+            border-right: 1px solid #A2A2B0;
+            justify-content: center;
+            padding: 0 5px;
+            height: 36px;
+
+            &>span:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header#cabecera ul#submenu {
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+
+    &>li {
+      flex: 20%;
+      border: none;
+      border-right: 1px solid #A2A2B0;
+      height: 36px;
+
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  /* Fin header*/
+}
+
+/* Fin escritorio */
+/* Fin breakpoints */
