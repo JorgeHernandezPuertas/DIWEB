@@ -49,6 +49,14 @@ a {
   text-decoration: line-through;
 }
 
+section>h2 {
+  color: #1F414F;
+  font-size: 40px;
+  border-bottom: 1px solid #A2A2B0;
+  flex: 100%;
+  padding-bottom: .5rem;
+}
+
 /* Fin estilos generales */
 
 /* Estilos específicos */
@@ -325,6 +333,7 @@ ul#submenu {
 
 /* Fin submenu desplegable */
 /* Main */
+
 /* Homepage */
 #homepage>main {
   display: flex;
@@ -365,7 +374,7 @@ ul#submenu {
 }
 
 /* Fin homepage */
-
+/* Libros */
 
 section.libros {
   display: flex;
@@ -376,14 +385,6 @@ section.libros {
   justify-content: center;
   overflow: hidden;
   margin-bottom: 2rem;
-
-  &>h2 {
-    color: #1F414F;
-    font-size: 40px;
-    border-bottom: 1px solid #A2A2B0;
-    flex: 100%;
-    padding-bottom: .5rem;
-  }
 
   &>span {
     position: absolute;
@@ -543,6 +544,129 @@ section.libros {
   }
 }
 
+/* Fin libros */
+/*  Login */
+div#site-login {
+  height: 100dvh;
+  display: flex;
+  flex-flow: column;
+
+  &>main {
+    flex: 1;
+  }
+}
+
+section#login {
+  display: flex;
+  flex-flow: wrap;
+  padding-inline: 15px;
+  justify-content: center;
+  height: auto;
+
+  &>form {
+    display: flex;
+    flex: 50% 0;
+    flex-flow: wrap;
+    justify-content: center;
+    min-width: 304px;
+
+    &>div.form-group {
+      flex: 100%;
+      display: flex;
+      flex-flow: wrap;
+      max-width: 264px;
+      padding-bottom: 2rem;
+
+
+      &>label {
+        display: flex;
+        flex-flow: wrap;
+        flex: 100%;
+        position: relative;
+
+        &>span {
+          flex: 100%;
+          color: #1F5C4C;
+          font-size: 25px;
+          font-weight: bold;
+
+          &.mensaje {
+            max-height: 0;
+            color: #D5290C;
+            font-size: 12px;
+            overflow: hidden;
+            transition: max-height .5s ease-in;
+            position: absolute;
+            height: 15px;
+            top: 3.3rem;
+            left: 5px;
+          }
+        }
+
+        &>input {
+          flex: 100%;
+          border: 1px solid #1F5C4C;
+          transition: border-color .5s ease-in;
+
+          &.error {
+            border-color: #D5290C;
+            transition: border-color .5s ease-in;
+
+            &+span.mensaje {
+              max-height: 15px;
+              transition: max-height .5s ease-in;
+            }
+          }
+        }
+      }
+    }
+
+    &>footer {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+
+      &>div {
+        flex: 100%;
+        display: flex;
+        flex-flow: wrap;
+
+        &>span {
+          text-align: center;
+          color: #1F5C4C;
+          flex: 100%;
+
+          &>a {
+            color: #1F5C4C;
+
+            &:hover {
+              color: #8FAAB5;
+            }
+          }
+        }
+      }
+
+      &>button {
+        background-color: #1F414F;
+        width: 212px;
+        height: 87px;
+        line-height: 87px;
+        border: none;
+        border-radius: .5rem;
+        color: #FFF;
+        margin-top: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #8FAAB5;
+        }
+      }
+
+    }
+  }
+}
+
+/* Fin login */
 /* Fin main */
 
 /* Categoria */
@@ -550,8 +674,6 @@ div.categoria>main#cuerpo {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-
-
 }
 
 /* Fin categoria */
