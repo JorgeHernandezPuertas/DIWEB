@@ -1,14 +1,45 @@
 $(function () {
+  // Controlo que se oculte al hacer resize y no quede descuadrado el menú
+  $(window).on({
+    "resize": function () {
+      $("#menu").removeAttr("style")
+      $("#submenu").removeAttr("style")
+      if ($("#hamburguesa").children("img").hasClass("cruz")) {
+        $("#hamburguesa").children("img").stop(false, true).animate({
+          "opacity": "0"
+        }, function () {
+          $(this).removeClass("cruz").addClass("hamburguesa")
+        }).animate({
+          "opacity": "1"
+        })
+      }
+    }
+  })
+
   // Controlo el despligue del menú principal
   $("#hamburguesa").on({
     "click": function () {
       if ($("#menu").css("display") === "none") {
-        $(this).children("img").removeClass("hamburguesa")
-        $(this).children("img").addClass("cruz")
+        $(this).children("img").stop(true)
+        $(this).children("img").animate({
+          "opacity": "0"
+        }, function () {
+          $(this).removeClass("hamburguesa").addClass("cruz")
+        }).animate({
+          "opacity": "1"
+        })
+
         $("#menu").slideDown()
       } else {
-        $(this).children("img").removeClass("cruz")
-        $(this).children("img").addClass("hamburguesa")
+        $(this).children("img").stop(true)
+        $(this).children("img").animate({
+          "opacity": "0"
+        }, function () {
+          $(this).removeClass("cruz").addClass("hamburguesa")
+        }).animate({
+          "opacity": "1"
+        })
+
         $("#menu").slideUp()
       }
     }

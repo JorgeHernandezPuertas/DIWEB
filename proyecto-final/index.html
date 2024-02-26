@@ -18,19 +18,24 @@
         <label id="hamburguesa">
           <img class="hamburguesa" src="icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
         </label>
-        <h1 class="logo"><a href="#" title="BookShelter">BookShelter</a></h1>
+        <h1 class="logo"><a href="index.html" title="BookShelter">BookShelter</a></h1>
         <label id="usuario">
-          <img src="icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
+          <a href="./login.html">
+            <img src="icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
+          </a>
         </label>
         <label id="carrito">
           <span id="num-carrito">
             0
           </span>
-          <img src="icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
+          <a href="./cesta.html">
+            <img src="icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
+          </a>
         </label>
       </div>
       <div id="cabecera-inferior">
-        <input type="text" name="buscador" id="buscador" title="Buscador">
+        <input aria-label="Buscador" placeholder="Pon tu búsqueda aquí..." type="text" name="buscador" id="buscador"
+          title="Buscador">
         <label id="lupa">
           <img src="icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
         </label>
@@ -39,13 +44,13 @@
       <nav id="menu">
         <ul id="menu-principal">
           <li>
-            <a href="#">Recomendados</a>
+            <a href="./recomendados.html">Recomendados</a>
           </li>
           <li>
-            <a href="#">Novedades</a>
+            <a href="./novedades.html">Novedades</a>
           </li>
           <li>
-            <a href="#">Más leídos</a>
+            <a href="./mas-leidos.html">Más leídos</a>
           </li>
           <li>
             <div>
@@ -56,19 +61,19 @@
             </div>
             <ul id="submenu">
               <li>
-                <a href="#">Fantasía</a>
+                <a href="./fantasia.html">Fantasía</a>
               </li>
               <li>
-                <a href="#">Clásico</a>
+                <a href="./clasico.html">Clásico</a>
               </li>
               <li>
-                <a href="#">Misterio</a>
+                <a href="./misterio.html">Misterio</a>
               </li>
               <li>
-                <a href="#">Terror</a>
+                <a href="./terror.html">Terror</a>
               </li>
               <li>
-                <a href="#">Romance</a>
+                <a href="./romance.html">Romance</a>
               </li>
             </ul>
           </li>
@@ -106,10 +111,10 @@
       <!-- Recomendados -->
       <section class="libros">
         <h2>Recomendados</h2>
-        <span><a href="#">Ver más</a></span>
+        <span><a href="./recomendados.html">Ver más</a></span>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-princesa-esmeralda.webp" alt="La princesa esmeralda" title="La princesa esmeralda">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -123,12 +128,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/dracula.webp" alt="Drácula" title="Drácula">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -141,12 +146,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-arte-de-la-guerra.webp" alt="El arte de la guerra" title="El arte de la guerra">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -160,13 +165,13 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <!-- Esto es para cuando implemente el slider -->
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-principe.webp" alt="El príncipe" title="El príncipe">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -180,12 +185,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/al-lado.webp" alt="Al lado" title="Al lado">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -198,12 +203,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-misterio-del-tren-azul.webp" alt="El misterio el tren azul"
                 title="El misterio el tren azul">
             </a>
@@ -218,12 +223,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/imperio-final-portada.webp" alt="El imperio final" title="El imperio final">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -237,12 +242,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/aprendiz-de-asesino-portada.webp" alt="Aprendiz de asesino" title="Aprendiz de asesino">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -255,12 +260,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-ritmo-de-la-guerra-portada.webp" alt="El ritmo de la guerra"
                 title="El ritmo de la guerra">
             </a>
@@ -275,17 +280,17 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
       </section>
       <!-- Novedades -->
       <section class="libros">
         <h2>Novedades</h2>
-        <span><a href="#">Ver más</a></span>
+        <span><a href="./novedades.html">Ver más</a></span>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-principe.webp" alt="El príncipe" title="El príncipe">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -299,12 +304,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-bestiario-de-axlin.webp" alt="El bestiario de axlin" title="El bestiario de axlin">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -317,12 +322,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-misterio-del-tren-azul.webp" alt="El misterio del tren azul"
                 title="El misterio del tren azul">
             </a>
@@ -337,13 +342,13 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <!-- Esto es para cuando implemente el slider -->
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/siega.webp" alt="Siega" title="Siega">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -357,12 +362,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/meditaciones.webp" alt="Meditaciones" title="Meditaciones">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -375,12 +380,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/dracula.webp" alt="Drácula" title="Drácula">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -394,12 +399,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-llamada-de-cthulhu.webp" alt="La llamada de cthulhu" title="La llamada de cthulhu">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -413,12 +418,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-hipotesis-del-amor.webp" alt="La hipótesis del amor" title="La hipótesis del amor">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -431,12 +436,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-rastreadora.webp" alt="La rastreadora" title="La rastreadora">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -450,17 +455,17 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
       </section>
       <!-- Más leídos -->
       <section class="libros">
         <h2>Más leídos</h2>
-        <span><a href="#">Ver más</a></span>
+        <span><a href="./mas-leidos.html">Ver más</a></span>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/imperio-final-portada.webp" alt="El imperio final" title="El imperio final">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -474,12 +479,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/aprendiz-de-asesino-portada.webp" alt="Aprendiz de asesino" title="Aprendiz de asesino">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -492,12 +497,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-ritmo-de-la-guerra-portada.webp" alt="El ritmo de la guerra"
                 title="El ritmo de la guerra">
             </a>
@@ -512,13 +517,13 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <!-- Esto es para cuando implemente el slider -->
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-hipotesis-del-amor.webp" alt="La hipótesis del amor" title="La hipótesis del amor">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -532,12 +537,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-llamada-de-cthulhu.webp" alt="La llamada de cthulhu" title="La llamada de cthulhu">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -550,12 +555,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/siega.webp" alt="Siega" title="Siega">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -569,12 +574,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/la-rastreadora.webp" alt="La rastreadora" title="La rastreadora">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -588,12 +593,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/meditaciones.webp" alt="Meditaciones" title="Meditaciones">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -606,12 +611,12 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
-            <a href="#">
+            <a href="./libro.html">
               <img src="images/el-bestiario-de-axlin.webp" alt="El bestiario de axlin" title="El bestiario de axlin">
             </a>
             <span class="tipo">Tapa dura</span>
@@ -625,7 +630,7 @@
           <footer class="envio">
             <span>¡Envío gratis!</span>
             <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="#"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
       </section>
@@ -652,10 +657,10 @@
         </label>
       </nav>
       <div id="footer-inferior">
-        <a href="#">Políticas de privacidad</a>
-        <a href="#">Políticas de cookies</a>
-        <a href="#">Trabaja con nosotros</a>
-        <a href="#">FAQ</a>
+        <a href="./privacidad.html">Políticas de privacidad</a>
+        <a href="./cookies.html">Políticas de cookies</a>
+        <a href="./trabaja.html">Trabaja con nosotros</a>
+        <a href="./faq.html">FAQ</a>
       </div>
     </footer>
     <!-- Fin footer -->

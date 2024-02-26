@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookShelter</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/menu.js"></script>
+</head>
+
+<body>
+  <div id="site-recomendados" class="categoria">
+    <!-- Cabecera -->
+    <header id="cabecera">
+      <div id="cabecera-superior">
+        <label id="hamburguesa">
+          <img class="hamburguesa" src="icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
+        </label>
+        <h1 class="logo"><a href="index.html" title="BookShelter">BookShelter</a></h1>
+        <label id="usuario">
+          <a href="./login.html">
+            <img src="icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
+          </a>
+        </label>
+        <label id="carrito">
+          <span id="num-carrito">
+            0
+          </span>
+          <a href="./cesta.html">
+            <img src="icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
+          </a>
+        </label>
+      </div>
+      <div id="cabecera-inferior">
+        <input aria-label="Buscador" placeholder="Pon tu búsqueda aquí..." type="text" name="buscador" id="buscador"
+          title="Buscador">
+        <label id="lupa">
+          <img src="icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
+        </label>
+      </div>
+      <!-- Menú -->
+      <nav id="menu">
+        <ul id="menu-principal">
+          <li>
+            <a href="./recomendados.html">Recomendados</a>
+          </li>
+          <li>
+            <a href="./novedades.html">Novedades</a>
+          </li>
+          <li>
+            <a href="./mas-leidos.html">Más leídos</a>
+          </li>
+          <li>
+            <div>
+              <span>Categorías</span>
+              <span>
+                <img class="mas" src="icons/mas.svg" alt="Icono de más" title="Ver más">
+              </span>
+            </div>
+            <ul id="submenu">
+              <li>
+                <a href="./fantasia.html">Fantasía</a>
+              </li>
+              <li>
+                <a href="./clasico.html">Clásico</a>
+              </li>
+              <li>
+                <a href="./misterio.html">Misterio</a>
+              </li>
+              <li>
+                <a href="./terror.html">Terror</a>
+              </li>
+              <li>
+                <a href="./romance.html">Romance</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <span>
+                Síguenos:
+              </span>
+              <nav class="redes">
+                <label class="facebook">
+                  <a href="#">
+                    <img src="icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+                  </a>
+                </label>
+                <label class="instagram">
+                  <a href="#">
+                    <img src="icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+                  </a>
+                </label>
+                <label class="X">
+                  <a href="#">
+                    <img src="icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+                  </a>
+                </label>
+              </nav>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Fin menú -->
+    </header>
+    <!-- Fin cabecera -->
+    <!-- Cuerpo -->
+    <main id="cuerpo">
+      <section class="libros">
+        <h2>Terror</h2>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/chelston-house.webp" alt="Chelston House" title="Chelston House">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>CHELSTON HOUSE</h3>
+            <h4>Laura Falcó</h4>
+            <span class="tachado">29,99 €<span class="porcentaje">-5%</span></span>
+            <span class="rebajado">20 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/dracula.webp" alt="Drácula" title="Drácula">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>DRÁCULA</h3>
+            <h4>Bram Stoker</h4>
+            <span>20 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/frankestein.webp" alt="Frankenstein" title="Frankenstein">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>FRANKENSTEIN</h3>
+            <h4>Mary Shelley</h4>
+            <span class="tachado">33,99 €<span class="porcentaje">-5%</span></span>
+            <span class="rebajado">30 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <!-- Esto es para cuando implemente el slider -->
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/grimscribe.webp" alt="Grimscribe" title="Grimscribe">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>GRIMSCRIBE</h3>
+            <h4>Thomas Ligotti</h4>
+            <span class="tachado">29,99 €<span class="porcentaje">-5%</span></span>
+            <span class="rebajado">20 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/la-chica-de-al-lado.webp" alt="La chica de al lado" title="La chica de al lado">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>LA CHICA DE AL LADO</h3>
+            <h4>Jack Ketchum</h4>
+            <span>20 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/la-llamada-de-cthulhu.webp" alt="La llamada de Cthulhu" title="La llamada de Cthulhu">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>LA LLAMADA DE CHUTLHU</h3>
+            <h4>H.P Lovecraft</h4>
+            <span class="tachado">33,99 €<span class="porcentaje">-5%</span></span>
+            <span class="rebajado">30 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/la-pequeña-eve.webp" alt="La pequeña Eve" title="La pequeña Eve">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>LA PEQUEÑA EVE</h3>
+            <h4>Catriona Ward</h4>
+            <span class="tachado">29,99 €<span class="porcentaje">-5%</span></span>
+            <span class="rebajado">20 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/la-vuelta-de-tuerca.webp" alt="La vuelta de tuerca" title="La vuelta de tuerca">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>LA VUELTA DE TUERCA</h3>
+            <h4>Henry James</h4>
+            <span>20 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+        <article class="libro">
+          <header>
+            <a href="./libro.html">
+              <img src="images/la-rastreadora.webp" alt="La rastreadora" title="La rastreadora">
+            </a>
+            <span class="tipo">Tapa dura</span>
+          </header>
+          <div class="info">
+            <h3>LA RESTREADORA</h3>
+            <h4>Antonio Lagares</h4>
+            <span class="tachado">33,99 €<span class="porcentaje">-5%</span></span>
+            <span class="rebajado">30 €</span>
+          </div>
+          <footer class="envio">
+            <span>¡Envío gratis!</span>
+            <img src="icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+          </footer>
+        </article>
+      </section>
+    </main>
+    <!-- Fin cuerpo -->
+    <!-- Footer -->
+    <footer id="footer">
+      <nav id="footer-superior">
+        <label class="facebook">
+          <a href="#">
+            <img src="icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+          </a>
+        </label>
+        <label class="instagram">
+          <a href="#">
+            <img src="icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+          </a>
+        </label>
+        <label class="X">
+          <a href="#">
+            <img src="icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+          </a>
+        </label>
+      </nav>
+      <div id="footer-inferior">
+        <a href="#">Políticas de privacidad</a>
+        <a href="#">Políticas de cookies</a>
+        <a href="#">Trabaja con nosotros</a>
+        <a href="#">FAQ</a>
+      </div>
+    </footer>
+    <!-- Fin footer -->
+  </div>
+</body>
+
+</html>
