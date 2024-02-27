@@ -12,14 +12,14 @@
 </head>
 
 <body>
-  <div id="site-login">
+  <div id="site-pedido">
     <!-- Cabecera -->
     <header id="cabecera">
       <div id="cabecera-superior">
         <label id="hamburguesa">
           <img class="hamburguesa" src="icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
         </label>
-        <h1 class="logo"><a href="index.html" title="BookShelter">BookShelter</a></h1>
+        <h1 class="logo"><a href="./index.html" title="BookShelter">BookShelter</a></h1>
         <label id="usuario">
           <a href="./login.html">
             <img src="icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
@@ -109,28 +109,69 @@
     <!-- Fin cabecera -->
     <!-- Cuerpo -->
     <main id="cuerpo">
-      <section class="formulario" id="login">
-        <h2>Iniciar sesión</h2>
+      <section id="pedido">
+        <h2>Pedido</h2>
         <form action="." method="post">
-          <div class="form-group">
-            <label for="user">
-              <span>Usuario <span class="obligatorio">*</span></span>
-              <input type="text" name="usuario" id="user">
-              <span class="mensaje">Usuario incorrecto</span>
-            </label>
-          </div>
-          <div class="form-group">
-            <label for="password">
-              <span>Contraseña <span class="obligatorio">*</span></span>
-              <input type="text" name="password" id="password">
-              <span class="mensaje">Usuario incorrecto</span>
-            </label>
-          </div>
+          <header>
+            <article>
+              <h3>Dirección de envío</h3>
+              <div class="form-group solo">
+                <label for="direccion">
+                  <span>Dirección <span class="obligatorio">*</span></span>
+                  <input type="text" name="direccion" id="direccion">
+                  <span class="mensaje">Dirección incorrecta</span>
+                </label>
+              </div>
+              <div id="algo" class="form-group duo">
+                <label for="localidad">
+                  <span>Localidad <span class="obligatorio">*</span></span>
+                  <input type="text" name="localidad" id="localidad">
+                  <span class="mensaje">Localidad incorrecta</span>
+                </label>
+                <label for="cod-postal">
+                  <span>Código postal <span class="obligatorio">*</span></span>
+                  <input type="text" name="cod-postal" id="cod-postal">
+                  <span class="mensaje">Código incorrecto</span>
+                </label>
+              </div>
+            </article>
+            <article>
+              <h3>Método de pago</h3>
+              <div class="form-group">
+                <label for="tarjeta">
+                  <span>Nº de tarjeta <span class="obligatorio">*</span></span>
+                  <input type="text" name="tarjeta" id="tarjeta">
+                  <span class="mensaje">Número incorrecto</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="titular">
+                  <span>Titular de la tarjeta <span class="obligatorio">*</span></span>
+                  <input type="text" name="titular" id="titular">
+                  <span class="mensaje">Titular incorrecto</span>
+                </label>
+              </div>
+              <div class="form-group fecha">
+                <label for="mes">
+                  <span>Mes <span class="obligatorio">*</span></span>
+                  <input type="text" name="mes" id="mes">
+                  <span class="mensaje">Mes incorrecto</span>
+                </label>
+                <label for="anio">
+                  <span>Año <span class="obligatorio">*</span></span>
+                  <input type="text" name="anio" id="anio">
+                  <span class="mensaje">Año incorrecto</span>
+                </label>
+                <label for="cvv">
+                  <span>CVV <span class="obligatorio">*</span></span>
+                  <input type="password" name="cvv" id="cvv">
+                  <span class="mensaje">CVV incorrecto</span>
+                </label>
+              </div>
+            </article>
+          </header>
           <footer>
-            <div>
-              <span>¿No tienes cuenta? <a href="./signin.html">Crea tu cuenta</a></span>
-            </div>
-            <button>Iniciar sesión</button>
+            <button>Confirmar pedido</button>
           </footer>
 
         </form>

@@ -556,7 +556,7 @@ div#site-login {
   }
 }
 
-section#login {
+section.formulario {
   display: flex;
   flex-flow: wrap;
   padding-inline: 15px;
@@ -575,7 +575,6 @@ section#login {
       display: flex;
       flex-flow: wrap;
       max-width: 264px;
-      padding-bottom: 2rem;
 
 
       &>label {
@@ -583,6 +582,7 @@ section#login {
         flex-flow: wrap;
         flex: 100%;
         position: relative;
+        padding-bottom: 2rem;
 
         &>span {
           flex: 100%;
@@ -598,7 +598,7 @@ section#login {
             transition: max-height .5s ease-in;
             position: absolute;
             height: 15px;
-            top: 3.3rem;
+            top: 3.7rem;
             left: 5px;
           }
         }
@@ -606,6 +606,7 @@ section#login {
         &>input {
           flex: 100%;
           border: 1px solid #1F5C4C;
+          margin-top: .5rem;
           transition: border-color .5s ease-in;
 
           &.error {
@@ -667,6 +668,7 @@ section#login {
 }
 
 /* Fin login */
+
 /* Fin main */
 
 /* Categoria */
@@ -677,6 +679,142 @@ div.categoria>main#cuerpo {
 }
 
 /* Fin categoria */
+
+/* Pedido */
+main#cuerpo>section#pedido {
+  padding-inline: 15px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  max-width: 100%;
+
+  &>form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    flex: 100%;
+    max-width: 100%;
+
+    &>header {
+      display: flex;
+      flex: 100%;
+      justify-content: center;
+      flex-flow: wrap;
+      max-width: 100%;
+
+
+      &>article {
+        display: flex;
+        flex-flow: wrap;
+        padding-inline: 1rem;
+        justify-content: center;
+        flex: 100%;
+
+        &>h3 {
+          flex: 100%;
+          color: #1F414F;
+          font-size: 30px;
+          font-weight: bold;
+          border-bottom: 1px solid #A2A2B0;
+          padding-bottom: .5rem;
+          margin-bottom: 2.5rem;
+        }
+
+        &>div.form-group {
+          display: flex;
+          flex-flow: wrap;
+          flex: 100%;
+          justify-content: center;
+
+
+
+          &>label {
+            flex: 51% 0;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            position: relative;
+            padding-bottom: 2rem;
+            padding-inline: .5rem;
+
+            &>span {
+              flex: 100%;
+              color: #1F5C4C;
+              font-size: 25px;
+              font-weight: bold;
+              padding-bottom: .5rem;
+            }
+
+            &>input {
+              flex: 100%;
+              border: 1px solid #1F5C4C;
+              transition: border-color .5s ease-in;
+
+              &.error {
+                border-color: #D5290C;
+                transition: border-color .5s ease-in;
+
+                &+span.mensaje {
+                  max-height: 15px;
+                  transition: max-height .5s ease-in;
+                }
+              }
+            }
+
+            &>span.mensaje {
+              padding: 0;
+              color: #D5290C;
+              position: absolute;
+              overflow: hidden;
+              max-height: 0;
+              font-size: 12px;
+              font-weight: normal;
+              max-width: 100%;
+              left: .7rem;
+              top: 3.7rem;
+              transition: border-color .5s ease-in, max-height .5s ease-in;
+            }
+          }
+
+
+          &.fecha>label {
+            min-width: 85px;
+            max-width: calc(51% / 3);
+
+            &>input {
+              max-width: 100%;
+            }
+          }
+
+        }
+      }
+    }
+
+    footer {
+      flex: 100%;
+      display: flex;
+      justify-content: center;
+      flex-flow: wrap;
+
+      &>button {
+        background-color: #1F414F;
+        width: 212px;
+        height: 87px;
+        line-height: 87px;
+        border: none;
+        border-radius: .5rem;
+        color: #FFF;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #8FAAB5;
+        }
+      }
+    }
+  }
+}
+
+/* Fin pedido */
 /* Fin de cabecera */
 
 /* Footer */
@@ -772,6 +910,7 @@ div.categoria>main#cuerpo {
   /* Fin footer */
 
   /* Main */
+  /* Categorías */
   section.libros {
     justify-content: normal;
   }
@@ -780,7 +919,92 @@ div.categoria>main#cuerpo {
     flex: 50% 0;
   }
 
-  /* Fin main */
+  /* Fin categorías */
+
+  /* Login */
+  section#login>form>div.form-group {
+    max-width: 526px;
+  }
+
+  section.formulario>form>footer>div>span {
+    text-align: left;
+  }
+
+  /* Fin login */
+  /* Signin */
+  section#signin>form {
+    flex: 80% 0;
+
+    &>div.form-group {
+      display: flex;
+      flex: 100%;
+      max-width: 100%;
+      flex-flow: wrap;
+      justify-content: center;
+
+      &>label {
+        flex: 50% 0;
+        padding-right: 1rem;
+        max-width: 644px;
+
+        &:first-child {
+          justify-content: right;
+
+          &>span.mensaje {
+            left: inherit;
+            right: .8rem;
+            width: calc(100% - 1rem);
+          }
+        }
+
+        &>* {
+          max-width: 322px;
+        }
+      }
+
+      &.solo>label {
+        flex: 80% 0;
+        justify-content: center;
+        padding-right: 0;
+
+        &>span.mensaje {
+          left: inherit;
+          right: inherit;
+          margin-left: 10px;
+          width: 100%;
+        }
+
+        &>* {
+          max-width: 534px;
+        }
+      }
+    }
+
+    &>footer>div>span {
+      text-align: center;
+    }
+  }
+
+  /* Fin signin */
+  /* Pedido */
+  main#cuerpo>section#pedido>form>header>article>div.form-group {
+    &>label {
+      flex: 50% 0;
+      max-width: 380px;
+    }
+
+
+    &.fecha>label {
+      max-width: 125px;
+
+      &>input {
+        max-width: 100%;
+      }
+    }
+
+    /* Fin pedido */
+    /* Fin main */
+  }
 }
 
 /* Fin tablet */
