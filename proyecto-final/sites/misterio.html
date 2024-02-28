@@ -5,23 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BookShelter</title>
-  <link rel="stylesheet" href="css/estilos.css">
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/menu.js"></script>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/menu.js"></script>
 </head>
 
 <body>
-  <div id="site-recomendados" class="categoria">
+  <div id="site-misterio" class="categoria">
     <!-- Cabecera -->
     <header id="cabecera">
       <div id="cabecera-superior">
         <label id="hamburguesa">
-          <img class="hamburguesa" src="icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
+          <img class="hamburguesa" src="../icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
         </label>
-        <h1 class="logo"><a href="index.html" title="BookShelter">BookShelter</a></h1>
+        <h1 class="logo"><a href="../index.html" title="BookShelter">BookShelter</a></h1>
         <label id="usuario">
           <a href="./login.html">
-            <img src="icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
+            <img src="../icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
           </a>
         </label>
         <label id="carrito">
@@ -29,7 +29,7 @@
             0
           </span>
           <a href="./cesta.html">
-            <img src="icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
+            <img src="../icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
           </a>
         </label>
       </div>
@@ -37,7 +37,7 @@
         <input aria-label="Buscador" placeholder="Pon tu búsqueda aquí..." type="text" name="buscador" id="buscador"
           title="Buscador">
         <label id="lupa">
-          <img src="icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
+          <img src="../icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
         </label>
       </div>
       <!-- Menú -->
@@ -56,7 +56,7 @@
             <div>
               <span>Categorías</span>
               <span>
-                <img class="mas" src="icons/mas.svg" alt="Icono de más" title="Ver más">
+                <img class="mas" src="../icons/mas.svg" alt="Icono de más" title="Ver más">
               </span>
             </div>
             <ul id="submenu">
@@ -85,17 +85,17 @@
               <nav class="redes">
                 <label class="facebook">
                   <a href="#">
-                    <img src="icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+                    <img src="../icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
                   </a>
                 </label>
                 <label class="instagram">
                   <a href="#">
-                    <img src="icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+                    <img src="../icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
                   </a>
                 </label>
                 <label class="X">
                   <a href="#">
-                    <img src="icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+                    <img src="../icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
                   </a>
                 </label>
               </nav>
@@ -108,179 +108,180 @@
     <!-- Fin cabecera -->
     <!-- Cuerpo -->
     <main id="cuerpo">
-      <!-- Recomendados -->
+      <!-- Más leídos -->
       <section class="libros">
-        <h2>Recomendados</h2>
-        <span><a href="./recomendados.html">Ver más</a></span>
+        <h2>Más leídos</h2>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/la-princesa-esmeralda.webp" alt="La princesa esmeralda" title="La princesa esmeralda">
+              <img src="../images/al-lado.webp" alt="Al lado" title="Al lado">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>LA PRINCESA ESMERALDA</h3>
-            <h4>Mitsuhiro Monden</h4>
+            <h3>AL LADO</h3>
+            <h4>Blake Pierce</h4>
             <span class="tachado">29,99 €<span class="porcentaje">-5%</span></span>
             <span class="rebajado">20 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/dracula.webp" alt="Drácula" title="Drácula">
+              <img src="../images/el-misterio-del-alma.webp" alt="El misterio del alma" title="El misterio del alma">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>DRÁCULA</h3>
-            <h4>Bram Stoker</h4>
+            <h3>EL MISTERIO DEL ALMA</h3>
+            <h4>John Bridges</h4>
             <span>20 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/el-arte-de-la-guerra.webp" alt="El arte de la guerra" title="El arte de la guerra">
+              <img src="../images/el-misterio-del-tren-azul.webp" alt="El misterio del tren azul"
+                title="El misterio del tren azul">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>EL ARTE DE LA GUERRA</h3>
-            <h4>Sun Tzu</h4>
+            <h3>EL MISTERIO DEL TREN AZUL</h3>
+            <h4>Agatha Christie</h4>
             <span class="tachado">33,99 €<span class="porcentaje">-5%</span></span>
             <span class="rebajado">30 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <!-- Esto es para cuando implemente el slider -->
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/el-principe.webp" alt="El príncipe" title="El príncipe">
+              <img src="../images/el-misterio-razumovski.webp" alt="El misterio de razumovski"
+                title="El misterio de razumovski">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>EL PRÍNCIPE</h3>
-            <h4>Maquiavelo</h4>
+            <h3>EL MISTERIO DE RAZUMOVSKI</h3>
+            <h4>Martin Llade</h4>
             <span class="tachado">29,99 €<span class="porcentaje">-5%</span></span>
             <span class="rebajado">20 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/al-lado.webp" alt="Al lado" title="Al lado">
+              <img src="../images/los-misterios-de-madrid.webp" alt="Los misterios de Madrid"
+                title="Los misterios de Madrid">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>AL LADO</h3>
-            <h4>Black Pierce</h4>
+            <h3>LOS MISTERIOS DE MADRID</h3>
+            <h4>Antonio Muñoz Molina</h4>
             <span>20 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/el-misterio-del-tren-azul.webp" alt="El misterio el tren azul"
-                title="El misterio el tren azul">
+              <img src="../images/misterio-en-la-clinica.webp" alt="Misterio en la clínica"
+                title="Misterio en la clínica">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>EL MISTERIO DEL TREN AZUL</h3>
-            <h4>Brandon Sanderson</h4>
+            <h3>MISTERIO EN LA CLÍNICA</h3>
+            <h4>Mary Higgins</h4>
             <span class="tachado">33,99 €<span class="porcentaje">-5%</span></span>
             <span class="rebajado">30 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/imperio-final-portada.webp" alt="El imperio final" title="El imperio final">
+              <img src="../images/misterio-en-londres.webp" alt="Misterio en Londres" title="Misterio en Londres">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>EL IMPERIO FINAL</h3>
-            <h4>Brandon Sanderson</h4>
+            <h3>MISTERIO EN LONDRES</h3>
+            <h4>Mary Kelly</h4>
             <span class="tachado">29,99 €<span class="porcentaje">-5%</span></span>
             <span class="rebajado">20 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/aprendiz-de-asesino-portada.webp" alt="Aprendiz de asesino" title="Aprendiz de asesino">
+              <img src="../images/relatos-de-misterio.webp" alt="Relatos de misterio" title="Relatos de misterio">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>APRENDIZ DE ASESINO</h3>
-            <h4>Robbin Hobb</h4>
+            <h3>RELATOS DE MISTERIO</h3>
+            <h4>Chantal R.H</h4>
             <span>20 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
         <article class="libro">
           <header>
             <a href="./libro.html">
-              <img src="images/el-ritmo-de-la-guerra-portada.webp" alt="El ritmo de la guerra"
-                title="El ritmo de la guerra">
+              <img src="../images/una-llama-misteriosa.webp" alt="Una llama misteriosa" title="Una llama misteriosa">
             </a>
             <span class="tipo">Tapa dura</span>
           </header>
           <div class="info">
-            <h3>EL RITMO DE LA GUERRA</h3>
-            <h4>Brandon Sanderson</h4>
+            <h3>UNA LLAMA MISTERIOSA</h3>
+            <h4>Philip Kerr</h4>
             <span class="tachado">33,99 €<span class="porcentaje">-5%</span></span>
             <span class="rebajado">30 €</span>
           </div>
           <footer class="envio">
             <span>¡Envío gratis!</span>
-            <img src="icons/camion.svg" alt="Camion" title="Camion">
-            <a href="./libro.html"><img src="icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+            <a href="./libro.html"><img src="../icons/flecha.svg" alt="Flecha" title="Ver libro"></a>
           </footer>
         </article>
       </section>
@@ -291,17 +292,17 @@
       <nav id="footer-superior">
         <label class="facebook">
           <a href="#">
-            <img src="icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+            <img src="../icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
           </a>
         </label>
         <label class="instagram">
           <a href="#">
-            <img src="icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+            <img src="../icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
           </a>
         </label>
         <label class="X">
           <a href="#">
-            <img src="icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+            <img src="../icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
           </a>
         </label>
       </nav>

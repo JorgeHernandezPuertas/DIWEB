@@ -60,6 +60,63 @@ section>h2 {
 /* Fin estilos generales */
 
 /* Estilos específicos */
+/* Sombra */
+#sombra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #606063;
+  z-index: 100;
+  opacity: .4;
+}
+
+#cookies {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  background-color: #1F5C4C;
+  display: flex;
+  flex-flow: wrap;
+  height: 134px;
+  align-items: center;
+  color: #FFF;
+  bottom: 0;
+
+  &>header {
+    flex: 100%;
+    text-align: center;
+
+  }
+
+  &>footer {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+
+    &>button {
+      color: #FFF;
+      flex: 1;
+      margin-inline: 1rem;
+      min-width: 147px;
+      max-width: 147px;
+      line-height: 36px;
+      border-radius: .5rem;
+      border: none;
+      cursor: pointer;
+      background-color: #606063;
+
+      &:hover {
+        background-color: #A2A2B0;
+      }
+    }
+  }
+}
+
+/* Fin sombra */
 
 /* Cabecera */
 header#cabecera {
@@ -428,7 +485,7 @@ section.libros {
         &:hover>img {
           box-shadow: 10px 5px 5px #AAA;
           scale: 1.0125;
-          transition: scale .2s ease;
+          transition: scale .2s ease, box-shadow .2s ease;
         }
 
         &>img {
@@ -437,7 +494,7 @@ section.libros {
           height: fit-content;
           max-width: 380px;
           max-height: 581px;
-          transition: scale .2s ease;
+          transition: scale .2s ease, box-shadow .2s ease;
         }
 
       }
@@ -815,7 +872,316 @@ main#cuerpo>section#pedido {
 }
 
 /* Fin pedido */
-/* Fin de cabecera */
+/* Pedido-realizado */
+section.texto {
+  display: flex;
+  flex-flow: wrap;
+  flex: 100%;
+  padding-inline: 15px;
+
+  &>h2 {
+    flex: 100%;
+    border-bottom: 1px solid #A2A2B0;
+    font-size: 40px;
+    color: #1F414F;
+    padding-bottom: .5rem;
+  }
+
+  &>article {
+    display: flex;
+    flex-flow: wrap;
+    padding-inline: 15px;
+    flex: 100%;
+
+    &>h3 {
+      flex: 100%;
+      color: #1F5C4C;
+      font-size: 25px;
+      font-weight: bold;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid #A2A2B0;
+      margin-bottom: 0;
+    }
+
+    &>p {
+      padding-top: .5rem;
+    }
+
+    &.exito>p {
+      font-size: 25px;
+    }
+  }
+}
+
+/* Fin pedido-realizado */
+/* Carrito */
+section#carro {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding-inline: 15px;
+
+  &>article {
+    margin-inline: 15px;
+    flex: 100%;
+    border-block: 1px solid #A2A2B0;
+    padding-block: .5rem;
+    display: flex;
+    margin-bottom: 1rem;
+
+    &>a {
+      flex: 40% 0;
+      display: flex;
+      justify-content: center;
+      max-width: 180px;
+      min-width: 150px;
+
+      &>picture {
+        flex: 100%;
+
+        &>img {
+          transition: scale .2s ease, box-shadow .2s ease;
+        }
+
+        &:hover>img {
+          transition: scale .2s ease, box-shadow .2s ease;
+          transform: scale(1.0125);
+          box-shadow: 10px 5px 5px #AAA;
+        }
+      }
+    }
+
+    &>div.derecha {
+      flex: 60%;
+      display: flex;
+      flex-flow: wrap;
+      padding-left: 1rem;
+
+      &>header {
+        display: flex;
+        flex: 100%;
+        flex-flow: wrap;
+        align-self: flex-start;
+
+        &>h3 {
+          flex: 100%;
+          margin: 0;
+          padding-bottom: 1rem;
+          font-weight: bold;
+          font-size: 25px;
+        }
+
+        &>h4 {
+          flex: 100%;
+          margin: 0;
+          padding-bottom: 1rem;
+          color: #1F5C4C;
+          font-size: 25px;
+        }
+
+        &>span {
+          flex: 100%;
+          color: #606063;
+        }
+      }
+
+      &>footer {
+        display: flex;
+        flex: 100%;
+        justify-content: space-between;
+        align-items: center;
+        align-self: flex-end;
+        padding-block: 1rem;
+
+        &>div.cantidad {
+          border: 1px solid #1F5C4C;
+          flex: 1;
+          text-align: center;
+          min-width: 60px;
+          max-width: 150px;
+          display: flex;
+          margin-right: 2.5rem;
+          align-items: center;
+          position: relative;
+
+          &>span {
+            flex: 1;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #DDD;
+            }
+
+            &.numero {
+              border-inline: 1px solid #1F5C4C;
+              cursor: default;
+
+              &:hover {
+                background-color: inherit;
+              }
+            }
+          }
+
+          &>picture {
+            width: 35px;
+            position: absolute;
+            right: -2.25rem;
+            cursor: pointer;
+
+            &:hover>img {
+              content: url("../icons/papelera-hover.svg");
+            }
+          }
+        }
+
+        &>span>span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &>footer {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+
+    &>button {
+      background-color: #1F414F;
+      flex: 1;
+      max-width: 256px;
+      height: 87px;
+      line-height: 87px;
+      border: none;
+      border-radius: .5rem;
+      color: #FFF;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #8FAAB5;
+      }
+    }
+
+  }
+}
+
+/* Fin carrito  */
+/* Libro */
+section#libro {
+  padding-inline: 15px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+
+  &>article {
+    display: flex;
+    flex-flow: wrap;
+    padding-inline: 15px;
+    justify-content: center;
+
+    &>header {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      flex: 100%;
+
+      &>picture {
+        display: flex;
+        flex: 100%;
+        max-width: 380px;
+      }
+
+      &>span {
+        flex: 100%;
+        border-bottom: 1px solid #A2A2B0;
+        padding-block: 1rem;
+        text-align: center;
+      }
+
+      &>h3 {
+        flex: 100%;
+        color: #1F5C4C;
+        font-size: 25px;
+        font-weight: normal;
+        border-bottom: 1px solid #A2A2B0;
+        padding-bottom: 1rem;
+        padding-inline: 15px;
+      }
+    }
+
+
+
+    &>footer {
+      display: flex;
+      flex-flow: wrap;
+      flex: 100%;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+
+      &>div.sinopsis {
+        display: flex;
+        flex-flow: wrap;
+        border-bottom: 1px solid #A2A2B0;
+        padding-inline: 15px;
+        padding-bottom: .5rem;
+
+        &>h3 {
+          color: #1F414F;
+          font-size: 25px;
+          margin: 0;
+        }
+
+        &>p {
+          flex: 100%;
+          text-wrap: pretty;
+        }
+      }
+
+      &>span.precio {
+        font-size: 35px;
+        color: #606063;
+        padding-left: 15px;
+        padding-right: 0;
+      }
+
+      &>span {
+        font-size: 30px;
+        color: #1F5C4C;
+        font-weight: bold;
+        padding-block: 1rem;
+        padding-right: 50px;
+      }
+
+      &>img {
+        position: absolute;
+        width: 30px;
+        right: 10px;
+        bottom: 1.2rem;
+      }
+    }
+  }
+
+  &>button {
+    flex: 1;
+    max-width: 200px;
+    background-color: #1F414F;
+    height: 55px;
+    line-height: 55px;
+    border: none;
+    border-radius: .5rem;
+    color: #FFF;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: #8FAAB5;
+    }
+  }
+}
+
+/* Fin libro */
 
 /* Footer */
 #footer {
@@ -884,13 +1250,16 @@ main#cuerpo>section#pedido {
 /* Fin estilos específicos */
 
 
-
-
-
 /* Breakpoints */
 /* Tablet */
 @media (min-width: 768px) {
 
+  /* Cookies */
+  #cookies>footer>button {
+    max-width: 285px;
+  }
+
+  /* Fin cookies */
   /* Cabecera */
   #cabecera h1.logo {
     text-align: center;
@@ -1003,8 +1372,22 @@ main#cuerpo>section#pedido {
     }
 
     /* Fin pedido */
+
     /* Fin main */
   }
+
+  /* Carrito */
+  section#carro>footer>button {
+    max-width: 510px;
+  }
+
+  /* Fin carrito */
+  /* Libro */
+  section#libro>button {
+    max-width: 395px;
+  }
+
+  /* Fin libro */
 }
 
 /* Fin tablet */
@@ -1087,10 +1470,35 @@ main#cuerpo>section#pedido {
   /* Fin header*/
 
   /* Main */
+  /* Libros */
   section.libros>article.libro {
     flex: 33.33333% 0;
   }
 
+  /* Fin libros */
+  /* Carrito */
+  section#carro>article {
+    flex: 80% 0;
+    padding-inline: 1rem;
+  }
+
+  /* Fin carrito */
+  /* Libro */
+  section#libro>article {
+    align-items: flex-start;
+    position: relative;
+
+    &>header {
+      flex: 40% 0;
+    }
+
+    &>footer {
+      flex: 60%;
+      align-items: normal;
+    }
+  }
+
+  /* Fin libro */
   /* Fin main */
 }
 

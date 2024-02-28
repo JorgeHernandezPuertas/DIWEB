@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookShelter</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/menu.js"></script>
+</head>
+
+<body>
+  <div id="site-libro">
+    <!-- Cabecera -->
+    <header id="cabecera">
+      <div id="cabecera-superior">
+        <label id="hamburguesa">
+          <img class="hamburguesa" src="../icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
+        </label>
+        <h1 class="logo"><a href="../index.html" title="BookShelter">BookShelter</a></h1>
+        <label id="usuario">
+          <a href="./login.html">
+            <img src="../icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
+          </a>
+        </label>
+        <label id="carrito">
+          <span id="num-carrito">
+            0
+          </span>
+          <a href="./cesta.html">
+            <img src="../icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
+          </a>
+        </label>
+      </div>
+      <div id="cabecera-inferior">
+        <input aria-label="Buscador" placeholder="Pon tu búsqueda aquí..." type="text" name="buscador" id="buscador"
+          title="Buscador">
+        <label id="lupa">
+          <img src="../icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
+        </label>
+      </div>
+      <!-- Menú -->
+      <nav id="menu">
+        <ul id="menu-principal">
+          <li>
+            <a href="./recomendados.html">Recomendados</a>
+          </li>
+          <li>
+            <a href="./novedades.html">Novedades</a>
+          </li>
+          <li>
+            <a href="./mas-leidos.html">Más leídos</a>
+          </li>
+          <li>
+            <div>
+              <span>Categorías</span>
+              <span>
+                <img class="mas" src="../icons/mas.svg" alt="Icono de más" title="Ver más">
+              </span>
+            </div>
+            <ul id="submenu">
+              <li>
+                <a href="./fantasia.html">Fantasía</a>
+              </li>
+              <li>
+                <a href="./clasico.html">Clásico</a>
+              </li>
+              <li>
+                <a href="./misterio.html">Misterio</a>
+              </li>
+              <li>
+                <a href="./terror.html">Terror</a>
+              </li>
+              <li>
+                <a href="./romance.html">Romance</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <span>
+                Síguenos:
+              </span>
+              <nav class="redes">
+                <label class="facebook">
+                  <a href="#">
+                    <img src="../icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+                  </a>
+                </label>
+                <label class="instagram">
+                  <a href="#">
+                    <img src="../icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+                  </a>
+                </label>
+                <label class="X">
+                  <a href="#">
+                    <img src="../icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+                  </a>
+                </label>
+              </nav>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Fin menú -->
+    </header>
+    <!-- Fin cabecera -->
+    <!-- Cuerpo -->
+    <main id="cuerpo">
+      <section id="libro">
+        <h2>El imperio final</h2>
+        <article>
+          <header>
+            <picture>
+              <img src="../images/imperio-final-portada.webp" alt="El imperio final" title="El imperio final">
+            </picture>
+            <span class="tipo">Tapa dura</span>
+            <h3>Autor: Brandon Sanderson</h3>
+          </header>
+          <footer>
+            <div class="sinopsis">
+              <h3>Sinopsis</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Dignissim lacus non eget erat facilisis ornare pretium orci
+                semper. Pellentesque eros fermentum tincidunt ac tortor urna orci. Imperdiet ultricies fringilla
+                pulvinar
+                laoreet dui scelerisque metus ultricies viverra. Est gravida massa dictum in. Pellentesque elementum
+                semper faucibus volutpat imperdiet libero. Pharetra aliquam morbi volutpat consequat ac non. At sit vel
+                viverra lacus nulla suspendisse. Tellus fermentum egestas vivamus elit. Et non cursus leo odio dignissim
+                turpis id purus eget. Sem tellus risus neque duis morbi malesuada nulla lectus. Enim auctor interdum
+                ornare mauris.
+              </p>
+            </div>
+
+            <span class="precio">25 €</span>
+            <span>¡Envío gratis!</span>
+            <img src="../icons/camion.svg" alt="Camion" title="Camion">
+          </footer>
+        </article>
+        <button>Añadir al carrito</button>
+      </section>
+    </main>
+    <!-- Fin cuerpo -->
+    <!-- Footer -->
+    <footer id="footer">
+      <nav id="footer-superior">
+        <label class="facebook">
+          <a href="#">
+            <img src="../icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+          </a>
+        </label>
+        <label class="instagram">
+          <a href="#">
+            <img src="../icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+          </a>
+        </label>
+        <label class="X">
+          <a href="#">
+            <img src="../icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+          </a>
+        </label>
+      </nav>
+      <div id="footer-inferior">
+        <a href="#">Políticas de privacidad</a>
+        <a href="#">Políticas de cookies</a>
+        <a href="#">Trabaja con nosotros</a>
+        <a href="#">FAQ</a>
+      </div>
+    </footer>
+    <!-- Fin footer -->
+  </div>
+</body>
+
+</html>

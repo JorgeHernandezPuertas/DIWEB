@@ -5,24 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BookShelter</title>
-  <link rel="stylesheet" href="css/estilos.css">
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/menu.js"></script>
-  <script src="./js/formulario-sesion.js"></script>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/cesta.js"></script>
 </head>
 
 <body>
-  <div id="site-signin">
+  <div id="site-carrito">
     <!-- Cabecera -->
     <header id="cabecera">
       <div id="cabecera-superior">
         <label id="hamburguesa">
-          <img class="hamburguesa" src="icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
+          <img class="hamburguesa" src="../icons/hamburguesa.svg" alt="Icono de Hamburguesa" title="Menú">
         </label>
-        <h1 class="logo"><a href="index.html" title="BookShelter">BookShelter</a></h1>
+        <h1 class="logo"><a href="../index.html" title="BookShelter">BookShelter</a></h1>
         <label id="usuario">
           <a href="./login.html">
-            <img src="icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
+            <img src="../icons/icono-user.svg" alt="Icono de Usuario" title="Usuario">
           </a>
         </label>
         <label id="carrito">
@@ -30,7 +30,7 @@
             0
           </span>
           <a href="./cesta.html">
-            <img src="icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
+            <img src="../icons/icono-carrito.svg" alt="Icono de Carrito" title="Carrito de Compra">
           </a>
         </label>
       </div>
@@ -38,7 +38,7 @@
         <input aria-label="Buscador" placeholder="Pon tu búsqueda aquí..." type="text" name="buscador" id="buscador"
           title="Buscador">
         <label id="lupa">
-          <img src="icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
+          <img src="../icons/icono-buscador.svg" alt="Icono de Lupa" title="Buscar">
         </label>
       </div>
       <!-- Menú -->
@@ -57,7 +57,7 @@
             <div>
               <span>Categorías</span>
               <span>
-                <img class="mas" src="icons/mas.svg" alt="Icono de más" title="Ver más">
+                <img class="mas" src="../icons/mas.svg" alt="Icono de más" title="Ver más">
               </span>
             </div>
             <ul id="submenu">
@@ -86,17 +86,17 @@
               <nav class="redes">
                 <label class="facebook">
                   <a href="#">
-                    <img src="icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+                    <img src="../icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
                   </a>
                 </label>
                 <label class="instagram">
                   <a href="#">
-                    <img src="icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+                    <img src="../icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
                   </a>
                 </label>
                 <label class="X">
                   <a href="#">
-                    <img src="icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+                    <img src="../icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
                   </a>
                 </label>
               </nav>
@@ -109,48 +109,58 @@
     <!-- Fin cabecera -->
     <!-- Cuerpo -->
     <main id="cuerpo">
-      <section id="signin" class="formulario">
-        <h2>Creación de cuenta</h2>
-        <form action="." method="post">
-          <div class="form-group">
-            <label for="user">
-              <span>Usuario <span class="obligatorio">*</span></span>
-              <input type="text" name="usuario" id="user">
-              <span class="mensaje">Usuario incorrecto</span>
-            </label>
-            <label for="password">
-              <span>Contraseña <span class="obligatorio">*</span></span>
-              <input type="text" name="password" id="password">
-              <span class="mensaje">Usuario incorrecto</span>
-            </label>
+      <section id="carro">
+        <h2>Carrito</h2>
+        <article>
+          <a href="./libro.html">
+            <picture>
+              <img src="../images/aprendiz-de-asesino-portada.webp" alt="Aprendiz de asesino"
+                title="Aprendiz de asesino">
+            </picture>
+          </a>
+          <div class="derecha">
+            <header>
+              <h3>Aprendiz de asesino</h3>
+              <h4>Robin Hobb</h4>
+              <span class="tipo">Tapa dura</span>
+            </header>
+            <footer>
+              <div class="cantidad">
+                <span class="menos"> - </span>
+                <span class="numero"> 1 </span>
+                <span class="mas"> + </span>
+                <picture><img src="../icons/papelera.svg" alt=""></picture>
+              </div>
+              <span>Total: <span>20 €</span></span>
+            </footer>
           </div>
-          <div class="form-group">
-            <label for="nombre">
-              <span>Nombre <span class="obligatorio">*</span></span>
-              <input type="text" name="nombre" id="nombre">
-              <span class="mensaje">Nombre incorrecto</span>
-            </label>
-            <label for="apellido">
-              <span>Apellido <span class="obligatorio">*</span></span>
-              <input type="text" name="apellido" id="apellido">
-              <span class="mensaje">Apellido incorrecto</span>
-            </label>
+        </article>
+        <article>
+          <a href="./libro.html">
+            <picture>
+              <img src="../images/indigno-de-ser-humano.webp" alt="Indigno de ser humano" title="Indigno de ser humano">
+            </picture>
+          </a>
+          <div class="derecha">
+            <header>
+              <h3>Indigno de ser humano</h3>
+              <h4>Osamu Dazai</h4>
+              <span class="tipo">Tapa dura</span>
+            </header>
+            <footer>
+              <div class="cantidad">
+                <span class="menos"> - </span>
+                <span class="numero"> 2 </span>
+                <span class="mas"> + </span>
+                <picture><img src="../icons/papelera.svg" alt=""></picture>
+              </div>
+              <span>Total: <span>40 €</span></span>
+            </footer>
           </div>
-          <div class="form-group solo">
-            <label for="email">
-              <span>E-mail <span class="obligatorio">*</span></span>
-              <input type="text" name="email" id="email">
-              <span class="mensaje">E-mail incorrecto</span>
-            </label>
-          </div>
-          <footer>
-            <div>
-              <span>¿Ya tienes cuenta? <a href="./login.html">Inicia sesión</a></span>
-            </div>
-            <button>Crear cuenta</button>
-          </footer>
-
-        </form>
+        </article>
+        <footer>
+          <button>Comprar ahora</button>
+        </footer>
       </section>
     </main>
     <!-- Fin cuerpo -->
@@ -159,17 +169,17 @@
       <nav id="footer-superior">
         <label class="facebook">
           <a href="#">
-            <img src="icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
+            <img src="../icons/icono-facebook.svg" alt="Icono de Facebook" title="Facebook">
           </a>
         </label>
         <label class="instagram">
           <a href="#">
-            <img src="icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
+            <img src="../icons/icono-ig.svg" alt="Icono de Facebook" title="Instagram">
           </a>
         </label>
         <label class="X">
           <a href="#">
-            <img src="icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
+            <img src="../icons/Twitter-X.svg" alt="Icono de Facebook" title="X">
           </a>
         </label>
       </nav>
