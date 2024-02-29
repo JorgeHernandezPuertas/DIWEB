@@ -1,7 +1,7 @@
 $(function () {
-  $("#cookies button").on({
+  $("#panel-cookies button").on({
     "click": function () {
-      $("#cookies").css("display", "none")
+      $("#panel-cookies").css("display", "none")
       $("#sombra").css("display", "none")
     }
   })
