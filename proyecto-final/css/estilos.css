@@ -1255,7 +1255,7 @@ section#libro {
 @media (min-width: 768px) {
 
   /* Cookies */
-  #cookies>footer>button {
+  #panel-cookies>footer>button {
     max-width: 285px;
   }
 
