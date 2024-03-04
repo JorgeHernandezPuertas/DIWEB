@@ -17,6 +17,7 @@ div#slider {
 
 div#desplazable {
     position: absolute;
+    overflow: hidden;
 }
 
 div#oscuro {
@@ -230,6 +231,7 @@ main {
 }
 
 main>article.item {
+    position: relative;
     flex: 0 1 50%;
 
     display: flex;
@@ -349,7 +351,23 @@ div#volverarriba>a {
     padding: 0.2rem 1rem;
 }
 
-/* Animaciones */
+/* Boton de compra */
 
+#desplazable>main>article.item>button {
+    display: none;
+    width: 10rem;
+    height: 40px;
+    position: absolute;
+    z-index: 50;
+    top: 40px;
+    left: calc(50% - 5rem);
+    background-color: #DEDEDE;
+    border: 1px solid black;
+    border-radius: .25rem;
 
-/* Fin animaciones */
+    &:hover {
+        background-color: #BBB;
+    }
+}
+
+/* Fin boton de compra */

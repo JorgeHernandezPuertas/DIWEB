@@ -1,4 +1,5 @@
 $(function () {
+
   // Efectos de scroll
   // Aparecer el botón
   $(window).on({
@@ -27,7 +28,7 @@ $(function () {
         $("#volverarriba").fadeOut("slow")
 
         // Efectos de fixed
-        $("#top").stop(false,true)
+        $("#top").stop(false, true)
         $("#top").removeAttr("style").css({ 'opacity': '.7' }).animate({ 'opacity': "1" }, 500)
       }
     }
@@ -38,7 +39,7 @@ $(function () {
     "click": function () {
       $("html").animate({
         scrollTop: 0
-      }, "1000")
+      }, "500")
     }
   })
 
@@ -47,20 +48,25 @@ $(function () {
     "click": function () {
       // Controlo que en caso de acumulación, solo se anime el último
       $("#menu").stop(false, true)
-      // Despliego o pliego en función de su posición
-      if ($("#menu").css("top") != "0px") {
-        $("#menu").animate({
-          "left": "-20rem"
-        }, 1000, function () {
-          $(this).css({ "top": "0" })
-        })
-      } else {
-        $("#menu").css({
-          "top": "3.6rem",
-        }).animate({
-          "left": "0"
-        }, 1000)
-      }
+      $("#oscuro").stop(false, true)
+      $("#desplazable").stop(false, true)
+      // Pongo el resto de la página en gris
+      $("#oscuro").css({
+        display: "block",
+        width: "100dvw",
+        height: "100dvh",
+        opacity: "0"
+      }).animate({
+        left: "288px",
+        opacity: ".8"
+      }, 500)
+      // Muevo el main con el menu
+      $("#desplazable").animate({
+        left: "288px",
+      }, 500)
+      $("#menu").animate({
+        "left": "0"
+      }, 500)
     }
   })
 
@@ -70,8 +76,8 @@ $(function () {
       // Animo el despliegue
       // En caso de spam de animaciones, ejecuto solo la última
       $(this).siblings("ul").stop(false, true)
-      if ($(this).parent("li").children("ul").css("display") === "none"){
-        
+      if ($(this).parent("li").children("ul").css("display") === "none") {
+
         $("#menu li").children("ul").slideUp()
         $(this).siblings("ul").slideDown()
         // Controlo la flechita
@@ -97,12 +103,45 @@ $(function () {
 
   // Cambio la imagen al poner el ratón encima
   $(".item a picture img").on({
-    // Al entrar pongo la imagen 2
     "mouseenter": function () {
-      $(this).attr("src", $(this).attr("src").replace(".", "-1."))
-    }, // Al salir pongo la imagen 1
+      // Enseño el boton
+      $(this).parent().parent().siblings("button").stop(false, true)
+      $(this).parent().parent().siblings("button").fadeIn()
+    },
     "mouseleave": function () {
-      $(this).attr("src", $(this).attr("src").replace("-1.", "."))
+      // Quito el boton
+      $(this).parent().parent().siblings("button").stop(false, true)
+      $(this).parent().parent().siblings("button").fadeOut()
     }
   })
+
+  // Hago que al estar en el botón siga el estado de dentro de la foto
+  $(".item button").on({
+    "mouseenter": function () {
+      $(this).stop(false)
+    }
+  })
+
+  // Hago que al pulsar lo oscuro se quite el menú
+  $("#oscuro").on({
+    click: function () {
+      $("#menu").stop(false, true)
+      $("#oscuro").stop(false, true)
+      $("#desplazable").stop(false, true)
+
+      $("#oscuro").animate({
+        left: "0",
+        opacity: "0"
+      }, function () {
+        $(this).css("display", "none")
+      })
+      $("#desplazable").animate({
+        left: "0",
+      }, 500)
+      $("#menu").animate({
+        "left": "-20rem"
+      }, 500)
+    }
+  })
+
 })
