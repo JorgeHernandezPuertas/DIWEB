@@ -1,5 +1,8 @@
 $(function () {
 
+  // Slider
+  $('.bxslider').bxSlider()
+
   // Efectos de scroll
   // Aparecer el botón
   $(window).on({
