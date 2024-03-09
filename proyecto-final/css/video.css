@@ -1,5 +1,6 @@
 /* Etiquetas generales */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -7,6 +8,8 @@ button {
   cursor: pointer;
   background-color: inherit;
   border: none;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   max-width: 2.5rem;
 }
@@ -19,8 +22,13 @@ div#reproductor {
   min-width: 40rem;
   border-radius: .5rem;
   padding: .2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: wrap;
   flex-flow: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -52,9 +60,17 @@ div#reproductor button.pause svg#play {
 /* Fin cambio de icono en el play/pause */
 
 div#reproductor div#caja-tiempo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: 5;
+  -ms-flex: 5;
   flex: 5;
 
   input[type="range"] {
@@ -69,10 +85,18 @@ div#reproductor div#caja-tiempo {
 }
 
 div#reproductor div#caja-volumen {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   /* Añado el volumen desplegable y sus animaciones */
@@ -80,17 +104,21 @@ div#reproductor div#caja-volumen {
     /* Le añado padding para que no se cierre al separar un poco el raton */
     padding: .7rem 0;
     width: 0;
+    -webkit-transition: width .5s ease;
+    -o-transition: width .5s ease;
     transition: width .5s ease;
     position: absolute;
     left: 3rem;
 
     &::-webkit-slider-thumb {
       visibility: hidden;
+      -webkit-transition: visibility .3s ease;
       transition: visibility .3s ease;
     }
 
     &::-moz-range-thumb {
       visibility: hidden;
+      -moz-transition: visibility .3s ease;
       transition: visibility .3s ease;
     }
   }
@@ -99,6 +127,8 @@ div#reproductor div#caja-volumen {
     input[type="range"] {
       display: initial;
       width: 6rem;
+      -webkit-transition: width .5s ease;
+      -o-transition: width .5s ease;
       transition: width .5s ease;
 
       &::-webkit-slider-thumb {
@@ -116,9 +146,13 @@ div#reproductor div#caja-volumen {
 
 /* Cambio el estilo de las barras */
 div#reproductor input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background: transparent;
   cursor: pointer;
+  -webkit-box-flex: 10rem;
+  -ms-flex: 10rem 0;
   flex: 10rem 0;
 
   /* Cambio el slider para los navegadores basados en chromium (Chrome, Safari, Opera, and Edge Chromium) */
@@ -127,11 +161,13 @@ div#reproductor input[type="range"] {
     border-radius: 20rem;
     background: #8FAAB5;
     /* Por compatibilidad en los navegadores antiguos */
+    background: -webkit-gradient(linear, left top, right top, from(#8FAAB5), color-stop(0, #606063));
     background: linear-gradient(to right, #8FAAB5 calc(var(--value) * 1%), #606063 0);
   }
 
   &::-webkit-slider-thumb {
     /* Quito la apariencia predeterminada */
+    -webkit-appearance: none;
     appearance: none;
     /* Centro el circulo en la barra */
     margin-top: -2px;
@@ -157,6 +193,7 @@ div#reproductor input[type="range"] {
 
   &::-moz-range-thumb {
     /* Quito la apariencia predeterminada */
+    -moz-appearance: none;
     appearance: none;
     /* Centro el circulo en la barra */
     margin-top: -2px;
