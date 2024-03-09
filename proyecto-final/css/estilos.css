@@ -457,6 +457,38 @@ ul#submenu {
   /* Para el futuro slider */
 }
 
+#sobre-nosotros {
+  flex: 100%;
+  padding-inline: 12px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  display: none;
+
+  &>h2 {
+    width: 100%;
+  }
+
+  & #reproductor {
+    flex: 1;
+  }
+
+  & footer {
+    flex: 100%;
+    display: flex;
+    flex-flow: wrap;
+    padding-inline: 1rem;
+    justify-content: center;
+    max-width: 40rem;
+
+    & p {
+      flex: 100%;
+      text-wrap: pretty;
+      padding-top: 1rem;
+    }
+  }
+}
+
 /* Fin homepage */
 /* Libros */
 
@@ -1497,6 +1529,12 @@ section#libro {
   /* Fin header*/
 
   /* Main */
+  /* Reproductor */
+  #sobre-nosotros {
+    display: flex;
+  }
+
+  /* Fin reproductor */
   /* Libros */
   section.libros>article.libro {
     flex: 33.33333% 0;

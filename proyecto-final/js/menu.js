@@ -41,7 +41,6 @@ $(function () {
       }
 
       // Efectos de scroll
-      console.log($(window).scrollTop())
       if ($(window).scrollTop() >= 110) {
         if ($("#cabecera").css("position") !== "fixed") {
           $("#cabecera").stop(false, true)

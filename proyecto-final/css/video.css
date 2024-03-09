@@ -1,0 +1,196 @@
+/* Etiquetas generales */
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  flex: 1;
+  max-width: 2.5rem;
+}
+
+/* Fin etiquetas generales */
+/* Etiquetas específicas */
+div#reproductor {
+  background-color: #1F414F;
+  max-width: 40rem;
+  min-width: 40rem;
+  border-radius: .5rem;
+  padding: .2rem;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+div#reproductor video#video {
+  /* Pongo width porque al flex el video no le hace caso */
+  width: 100%;
+  border-radius: .5rem .5rem 0 0;
+  margin-bottom: .5rem;
+}
+
+div#reproductor button svg {
+  fill: #FFFFFF;
+
+  &:hover {
+    fill: #CFCFCF;
+  }
+}
+
+/* Cambio de icono en el play/pause */
+div#reproductor button.play svg#pause {
+  display: none;
+}
+
+div#reproductor button.pause svg#play {
+  display: none;
+}
+
+
+/* Fin cambio de icono en el play/pause */
+
+div#reproductor div#caja-tiempo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+
+  input[type="range"] {
+    padding: 0 .3rem;
+  }
+
+  span {
+    color: #FFF;
+    font-size: .8rem;
+    line-height: 1rem;
+  }
+}
+
+div#reproductor div#caja-volumen {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  justify-content: center;
+
+  /* Añado el volumen desplegable y sus animaciones */
+  input[type="range"] {
+    /* Le añado padding para que no se cierre al separar un poco el raton */
+    padding: .7rem 0;
+    width: 0;
+    transition: width .5s ease;
+    position: absolute;
+    left: 3rem;
+
+    &::-webkit-slider-thumb {
+      visibility: hidden;
+      transition: visibility .3s ease;
+    }
+
+    &::-moz-range-thumb {
+      visibility: hidden;
+      transition: visibility .3s ease;
+    }
+  }
+
+  &:hover {
+    input[type="range"] {
+      display: initial;
+      width: 6rem;
+      transition: width .5s ease;
+
+      &::-webkit-slider-thumb {
+        visibility: visible;
+      }
+
+      &::-moz-range-thumb {
+        visibility: visible;
+      }
+    }
+  }
+
+  /* Fin del volumen desplegable */
+}
+
+/* Cambio el estilo de las barras */
+div#reproductor input[type="range"] {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  flex: 10rem 0;
+
+  /* Cambio el slider para los navegadores basados en chromium (Chrome, Safari, Opera, and Edge Chromium) */
+  &::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: 20rem;
+    background: #8FAAB5;
+    /* Por compatibilidad en los navegadores antiguos */
+    background: linear-gradient(to right, #8FAAB5 calc(var(--value) * 1%), #606063 0);
+  }
+
+  &::-webkit-slider-thumb {
+    /* Quito la apariencia predeterminada */
+    appearance: none;
+    /* Centro el circulo en la barra */
+    margin-top: -2px;
+    height: .8rem;
+    width: .8rem;
+    border-radius: 100%;
+    border: none;
+    background-color: #FFF;
+  }
+
+  &:hover::-webkit-slider-thumb {
+    background-color: #DDD;
+  }
+
+  /* Cambio el slider para mozilla */
+  &::-moz-range-track {
+    height: 0.5rem;
+    border-radius: 20rem;
+    background: #8FAAB5;
+    /* Por compatibilidad en los navegadores antiguos */
+    background: linear-gradient(to right, #8FAAB5 calc(var(--value) * 1%), #606063 0);
+  }
+
+  &::-moz-range-thumb {
+    /* Quito la apariencia predeterminada */
+    appearance: none;
+    /* Centro el circulo en la barra */
+    margin-top: -2px;
+    height: .8rem;
+    width: .8rem;
+    border-radius: 100%;
+    background-color: #FFF;
+    border: none;
+  }
+
+  &:hover::-moz-range-thumb {
+    background-color: #DDD;
+  }
+}
+
+/* Fin al cambio el estilo de las barras */
+
+/* Cambio de icono en el mute/unmuted */
+div#reproductor button.muted svg#unmuted {
+  display: none;
+}
+
+div#reproductor button.unmuted svg#muted {
+  display: none;
+}
+
+/* Fin cambio de icono en el mute/unmuted */
+
+div#reproductor button.pulsado svg {
+  fill: #369E82;
+
+  &:hover {
+    fill: #2F8A71;
+  }
+}
+
+/* Fin etiquetas específicas */
