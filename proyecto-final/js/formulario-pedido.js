@@ -21,4 +21,16 @@ $(function () {
       }
     }
   })
+
+  $("section form input:required").on({
+    focusout: function () {
+      if ($(this).val() === "") {
+        $(this).addClass("error")
+      } else {
+        if ($(this).hasClass("error")) {
+          $(this).removeClass("error")
+        }
+      }
+    }
+  })
 })

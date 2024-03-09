@@ -118,6 +118,33 @@ section>h2 {
 
 /* Fin sombra */
 
+/* Flecha para scroll up */
+#subir {
+  position: fixed;
+  z-index: 100;
+  bottom: 1rem;
+  right: .5rem;
+  background-color: #1F5C4C;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  opacity: .8;
+  display: none;
+
+  & svg {
+    width: 100%;
+    height: auto;
+    fill: #FFF;
+  }
+
+  &:hover {
+    filter: contrast(200%);
+  }
+}
+
+/* Fin flecha para scroll up */
+
 /* Cabecera */
 header#cabecera {
   flex: 100%;
@@ -290,7 +317,7 @@ header#cabecera {
               &>img.menos {
                 width: 27px;
                 height: auto;
-                content: url("../icons/guion.svg");
+                content: url("../icons/guion-hover.svg");
               }
             }
 

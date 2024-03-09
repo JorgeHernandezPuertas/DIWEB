@@ -7,6 +7,7 @@
   <title>BookShelter</title>
   <link rel="stylesheet" href="../css/estilos.css">
   <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.animate-colors-min.js"></script>
   <script src="../js/menu.js"></script>
   <script src="../js/formulario-sesion.js"></script>
   <script src="../js/formulario-pedido.js"></script>
@@ -119,19 +120,20 @@
               <div class="form-group solo">
                 <label for="direccion">
                   <span>Dirección <span class="obligatorio">*</span></span>
-                  <input type="text" name="direccion" id="direccion">
+                  <input type="text" name="direccion" id="direccion" required maxlength="100" minlength="4">
                   <span class="mensaje">Dirección incorrecta</span>
                 </label>
               </div>
               <div class="form-group duo">
                 <label for="localidad">
                   <span>Localidad <span class="obligatorio">*</span></span>
-                  <input type="text" name="localidad" id="localidad">
+                  <input type="text" name="localidad" id="localidad" required maxlength="100" minlength="4">
                   <span class="mensaje">Localidad incorrecta</span>
                 </label>
                 <label for="cod-postal">
                   <span>Código postal <span class="obligatorio">*</span></span>
-                  <input type="text" name="cod-postal" id="cod-postal">
+                  <input type="text" name="cod-postal" id="cod-postal" required
+                    pattern="^(?:0[1-9]\d{3}|[1-4]\d{4}|5[0-2]\d{3})$" minlength="5" maxlength="5">
                   <span class="mensaje">Código incorrecto</span>
                 </label>
               </div>
@@ -141,31 +143,31 @@
               <div class="form-group">
                 <label for="tarjeta">
                   <span>Nº de tarjeta <span class="obligatorio">*</span></span>
-                  <input type="text" name="tarjeta" id="tarjeta">
+                  <input type="text" name="tarjeta" id="tarjeta" required pattern="^[0-9]{15,16}$" maxlength="16">
                   <span class="mensaje">Número incorrecto</span>
                 </label>
               </div>
               <div class="form-group">
                 <label for="titular">
                   <span>Titular de la tarjeta <span class="obligatorio">*</span></span>
-                  <input type="text" name="titular" id="titular">
+                  <input type="text" name="titular" id="titular" required maxlength="100">
                   <span class="mensaje">Titular incorrecto</span>
                 </label>
               </div>
               <div class="form-group fecha">
                 <label for="mes">
                   <span>Mes <span class="obligatorio">*</span></span>
-                  <input type="text" name="mes" id="mes">
+                  <input type="text" name="mes" id="mes" required pattern="^[0-9]{1,2}$" maxlength="2">
                   <span class="mensaje">Incorrecto</span>
                 </label>
                 <label for="anio">
                   <span>Año <span class="obligatorio">*</span></span>
-                  <input type="text" name="anio" id="anio">
+                  <input type="text" name="anio" id="anio" required pattern="^[0-9]{2}$" maxlength="2">
                   <span class="mensaje">Incorrecto</span>
                 </label>
                 <label for="cvv">
                   <span>CVV <span class="obligatorio">*</span></span>
-                  <input type="password" name="cvv" id="cvv">
+                  <input type="password" name="cvv" id="cvv" required pattern="^[0-9]{3}$" maxlength="3">
                   <span class="mensaje">Incorrecto</span>
                 </label>
               </div>
